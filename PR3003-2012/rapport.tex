@@ -73,7 +73,7 @@ On s'intéresse à l'équation: \[\fbox{$P_t+T_t=ma_t$}\] \\
 Pour déterminer l'équation différentielle, on doit alors projeter $\vec{T}$ et  $\vec{mg}$ sur $\vec{u_t}$. \\
 On projette $\vec{mg}=-mg.\vec{u_y}$ sur $\vec{u_t}$\\
 
-\subsubsection{Projection du Poids sur la composante tangentielle}
+\subsection{Projection du Poids sur la composante tangentielle}
 \begin{figure}[H]
 	\includegraphics[scale=0.7]{GraphMathZoomProjectionPoids.png}
 	%\caption{Histoire de Sanofi}
@@ -88,13 +88,13 @@ Au final on trouve donc: $P_t=P.\cos(\tan^{-1}(\frac{1}{x_0})) $\\
 Or $\cos(\tan^{-1}(x))=\frac{1}{1+x^2}$  On en déduit donc: $P_t=P.\frac{1}{1+1/x^2_0}$ D'où: 
 \[\fbox{$P_t=P.\frac{x_0}{1+x^2_0}$}\]
 
-\subsubsection{Projection de la tension du ressort su la composante tangentielle}
+\subsection{Projection de la tension du ressort su la composante tangentielle}
 On projette désormais $\vec{T}$ sur $\vec{u_t}$.\\
+\subsubsection{Methode de Guillaume, diff d'angle}
 \begin{figure}[H]
 	\includegraphics[scale=0.35]{GraphMathZoomProjectionT2.png}
 	%\caption{Histoire de Sanofi}
 \end{figure} 
-
 $\cos(\phi)=\frac{x}{\sqrt{x^2+y^2}}=\frac{1}{\sqrt{1+x^2}}$ \\
 
 $\cos(\theta)=\frac{x}{\sqrt{(1-y)^2+x^2}}=\frac{x}{\sqrt{1+x^4/4}}$ \\
@@ -109,14 +109,40 @@ On trouve donc:\[\fbox{$T_t=T.[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} +
 %On en déduit ainsi: $\tan(\phi)=x_0$ et $\tan(\theta)=\frac{y_0-1}{x_0}$
 %On obtient ainsi $\alpha=\tan^{-1}(x_0) - \tan^{-1}(\frac{y_0-1}{x_0})$ et on en déduit: $T_t=T.\cos(\tan^{-1}(x_0) - \tan^{-1}(\frac{y_0-1}{x_0}))$ \\
 
-\subsubsection{Détermination de $a_t$}
-On a vu dans la première équation que $a_n=0$. On en déduit: $||\vec{a}||=a_t$
-On peut ainsi écrire: $a_t=||\vec{a}||$\\ %=$\sqrt{a_x^2+a_y^2}$
-Or $||\vec{a}||=\frac{\partial v}{\partial t}=\frac{\partial \sqrt{\dot{x}^2+\dot{y}^2}}{\partial t}$\\
+\subsubsection{Methode de Charles, Al-Kashi}
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{al-kashi.png}
+	%\caption{Histoire de Sanofi}
+\end{figure}
+On note x,y les coordonnées du point M.\\
+$a=\sqrt{(x_M-x_P)^2+(y_M-y_P)^2}=\sqrt{x^2+(\frac{x^2}{2}-1)}=\sqrt{x^2+\frac{x^4}{4}-x^2+1}=\sqrt{\frac{x^4}{4}+1}$\\
+$b=\sqrt{(x_M-x_P)^2+(y_M-\Delta(0))^2}=\sqrt{x^2+(\frac{x^2}{2}+\frac{x^2}{2})^2}=\sqrt{x^2+x^4}=x\sqrt{1+x^2}$\\
+note : faut-il mettre plutôt $|x|\sqrt{1+x^2}$ ?\\
+$c=\sqrt{(y_p-\Delta(0))^2}=\sqrt{(1+\frac{x^2}{2})^2}=1+\frac{x^2}{2}$\\
+D'après le théorème d'Al-Kashi : 
+$x_1 = \frac{5 + \sqrt{25 - 4 \times 6}}{2} = 3$\\
+$c^2 = a^2 + b^2 - 2ab\times\cos(\beta)$\\
+$\cos(\beta)=\frac{a^2+b^2-c^2}{2ab}=\frac{x^4/4+1+x^2+x^4-1-x^2-x^4/4}{2x\sqrt{x^4/4+1}\sqrt{1+x^2}}=\frac{x^3}{2\sqrt{\frac{x^4}{4}+1}\sqrt{1+x^2}}$\\
+On trouve donc :
+\[\fbox{ $T_t=T\times\frac{x^3}{2\sqrt{\frac{x^4}{4}+1}\sqrt{1+x^2}}$ }\]\\
+
+\subsection{Determination de $ \|T\| $}
+On détermine la valeur de la tension du ressort.\\
+$T=k(l-l_0)=k(\sqrt{(x_M-x_P)^2+(y_M-y_P)^2}-l_0)=k(\sqrt{x^2+(x^2/2-1)^2}-l_0)$\\
+$T=k(\sqrt{x^2+x^4/4-x^4+1}-l_0)$\\
+\[\fbox{ $T=k(\sqrt{1+\frac{x^4}{4}}-l_0)$ }\]
+
+\subsection{Détermination de $a_t$}
+On a vu dans la première équation que $a_n=0$. On en déduit: $||\vec{a}||=a_t$\\
+Avec une accélération normale nulle, on peut écrire la formule de l'accélération dans le repère de Frenet ainsi : $a_t=||\vec{a}||$\\ %=$\sqrt{a_x^2+a_y^2}$
+Or $||\vec{a}||=\frac{\partial v}{\partial t}=\frac{\partial \pm\sqrt{\dot{x}^2+\dot{y}^2}}{\partial t}$\\
+$ \dot{y}=\frac{\partial y}{\partial t}=\frac{\partial y}{\partial x}\times\frac{\partial x}{\partial t}=x\dot{x} $\\
+$ v=\sqrt{\dot{x}^2+\dot{x}^2x^2}=\dot{x}\sqrt{1+x^2} $\\
+$ \frac{\partial v}{\partial t}=\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}} $\\
 On trouve: \[\fbox{$a_t=\ddot{x}.\sqrt{1+x^2}+ \frac{\dot{x}^2.x}{\sqrt{1+x^2}}$}\] (Equation de Charles)
 %On obtient alors: $a_t=\sqrt{\ddot{x}^2+\ddot{y}^2}$
 
-\subsubsection{Détermination de l'équation différentielle}
+\subsection{Détermination de l'équation différentielle}
 A l'aide de ce qu'on a calculé précédemment on développe l'équation $mg_t+T_t=ma_t$ pour déterminer l'équation différentielle.
 On obtient alors: 
 \[\fbox{ $mg.\frac{x}{1+x^2} + k(l-l_0).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$}\]
