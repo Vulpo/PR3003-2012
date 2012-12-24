@@ -60,7 +60,7 @@ Renard Charles\\
 	%\caption{Histoire de Sanofi}
 \end{figure}
 La masselotte M se déplace uniquement selon la composante tangentielle. Pour déterminer l'équation différentielle on va donc particulièrement s'intéresser à l'équation sur la composante tangentielle.\\
-Pour cela, on commence à faire la somme des forces s'exerçant sur la composante tangentielle $\vec{u_t}$ et normale $\vec{u_n}$:
+Pour cela, on commence à faire la somme des forces s'exerçant sur la composante tangentielle $\vec{u_t}$ et normale $\vec{u_n}$ selon la seconde loi de Newton (PFD) :
 \[
    \left \{
    \begin{array}{r c l}
@@ -149,8 +149,19 @@ On obtient alors:
 % \[mg.\cos(\tan^{-1}(x_0)) + k(l-l_0).\cos(\tan^{-1}(x_0) - \tan^{-1}(\frac{y_0-1}{x_0}))=\sqrt{\ddot{x}^2+\ddot{y}^2}\]
  %En développant on a:\[mg.\cos(\tan^{-1}(x)) + k(\sqrt{(x^2/2-1)^2+x^2}-l_0).\cos(\tan^{-1}(x) - \tan^{-1}(\frac{x^2/2-1}{x})) - \sqrt{\ddot{x}^2+1}=0\]
 
-Equa diff de Charles:
-\[ \fbox{$ \ddot{x}.\sqrt{1+x^2}+ \frac{5x^3/8 + x^2/4 + \dot{x}.x}{1+x^2} + \frac{x}{\sqrt{1+x^2}} - \frac{l_0(5x^3/4 + x^2/2)}{2\sqrt{1+x^4/4}\sqrt{1+x^2} }=0 $}\]
+\paragraph{Equa diff de Charles:\\}
+On calcule maintenant l'équatio ndifférentielle du système en s'aidant des résultats précédents.\\
+On part de l'équation $ P_t+T_t=ma_t $\\
+avec $T_t=k(l-l_0)$ et $P_t=-mg$\\
+En développant les expression on obtient :\\
+$k(\sqrt{x^4/4+1}-l_0)\times \frac{x^3}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}-mg\frac{x}{1+x^2}=m(\ddot{x}\sqrt{1+x^2}+\frac{\ddot{x}^2x}{\sqrt{1+x^2}})$\\
+$ \frac{k}{m}(\frac{x^3}{2\sqrt{1+x^2}}-\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}})-\frac{xg}{\sqrt{1+x^2}}-\ddot{x}\sqrt{1+x^2}-\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+En prenant k=m et g=1 (données de l'énoncé), on obtient :\\
+$ -\frac{x^3}{2\sqrt{1+x^2}}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\frac{x}{\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+$ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+$ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+$ (-\frac{x^3}{2}+x)\frac{1}{1+x^2}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}(1+x^2)}+\ddot{x}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+\[ \fbox{$ \ddot{x}+\frac{\dot{x}^2x+x^3/2-x}{1+x^2}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}(1+x^2)} $}\]
 
 
 
