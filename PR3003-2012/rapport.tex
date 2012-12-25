@@ -145,23 +145,24 @@ On trouve: \[\fbox{$a_t=\ddot{x}.\sqrt{1+x^2}+ \frac{\dot{x}^2.x}{\sqrt{1+x^2}}$
 \subsection{Détermination de l'équation différentielle}
 A l'aide de ce qu'on a calculé précédemment on développe l'équation $mg_t+T_t=ma_t$ pour déterminer l'équation différentielle.
 On obtient alors: 
+\subsubsection{Equa diff de Guillaume}
 \[\fbox{ $mg.\frac{x}{1+x^2} + k(l-l_0).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - m.\ddot{x}.\sqrt{1+x^2} - m.\frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$}\]
 % \[mg.\cos(\tan^{-1}(x_0)) + k(l-l_0).\cos(\tan^{-1}(x_0) - \tan^{-1}(\frac{y_0-1}{x_0}))=\sqrt{\ddot{x}^2+\ddot{y}^2}\]
  %En développant on a:\[mg.\cos(\tan^{-1}(x)) + k(\sqrt{(x^2/2-1)^2+x^2}-l_0).\cos(\tan^{-1}(x) - \tan^{-1}(\frac{x^2/2-1}{x})) - \sqrt{\ddot{x}^2+1}=0\]
 
-\paragraph{Equa diff de Charles:\\}
+\subsubsection{Equa diff de Charles}
 On calcule maintenant l'équatio ndifférentielle du système en s'aidant des résultats précédents.\\
 On part de l'équation $ P_t+T_t=ma_t $\\
 avec $T_t=k(l-l_0)$ et $P_t=-mg$\\
 En développant les expression on obtient :\\
 $k(\sqrt{x^4/4+1}-l_0)\times \frac{x^3}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}-mg\frac{x}{1+x^2}=m(\ddot{x}\sqrt{1+x^2}+\frac{\ddot{x}^2x}{\sqrt{1+x^2}})$\\
 $ \frac{k}{m}(\frac{x^3}{2\sqrt{1+x^2}}-\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}})-\frac{xg}{\sqrt{1+x^2}}-\ddot{x}\sqrt{1+x^2}-\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
-En prenant k=m et g=1 (données de l'énoncé), on obtient :\\
-$ -\frac{x^3}{2\sqrt{1+x^2}}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\frac{x}{\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
-$ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
-$ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
-$ (-\frac{x^3}{2}+x)\frac{1}{1+x^2}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}(1+x^2)}+\ddot{x}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
-\[ \fbox{$ \ddot{x}+\frac{\dot{x}^2x+x^3/2-x}{1+x^2}+\frac{x^3\times l_0}{2\sqrt{x^4/4+1}(1+x^2)} $}\]
+En prenant k=m, g=1 et $a=l_0$ (données de l'énoncé), on obtient :\\
+$ -\frac{x^3}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\frac{x}{\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+$ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+$ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+$ (-\frac{x^3}{2}+x)\frac{1}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}+\ddot{x}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+\[ \fbox{$ \ddot{x}+\frac{\dot{x}^2x+x^3/2-x}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0 $}\]
 
 
 
