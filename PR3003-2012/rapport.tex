@@ -147,11 +147,18 @@ A l'aide de ce qu'on a calculé précédemment on développe l'équation $mg_t+T
 On obtient alors: 
 \subsubsection{Equa diff de Guillaume}
 En développant et en prenant k=m, g=1 et $a=l_0$ (données de l'énoncé), on obtient :\\
- $m.1.\frac{x}{1+x^2} + m(\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - m.\ddot{x}.\sqrt{1+x^2} - m.\frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$ \\
+$m.1.\frac{x}{1+x^2} + m(\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - m.\ddot{x}.\sqrt{1+x^2} - m.\frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$ \\
  
-  $\frac{x}{1+x^2} + (\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
+$\frac{x}{1+x^2} + (\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
   
- $\frac{x}{1+x^2} + [\frac{x}{\sqrt{1+x^2}} + \sqrt{x^4/4+1}.\sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}]-a.\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + a.\sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}} - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
+$\frac{x}{1+x^2} + (\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \frac{x}{\sqrt{1+x^2}}.\sqrt{\frac{x^4/4-x^2+1}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
+  
+$\frac{x}{1+x^2} + [\frac{x}{\sqrt{1+x^2}} + \frac{x.\sqrt{x^4/4-x^2+1}}{\sqrt{1+x^2}}] -a.[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \frac{x}{\sqrt{1+x^2}}.\sqrt{\frac{x^4/4-x^2+1}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
+ 
+$\frac{x}{(1+x^2)^{3/2}} + [\frac{x}{1+x^2} + \frac{x.\sqrt{x^4/4-x^2+1}}{1+x^2}] -a.[\frac{x}{(1+x^2).\sqrt{1+x^4/4}} +\frac{x.\sqrt{x^4/4-x^2+1}}{(1+x^2).\sqrt{1+x^4/4}}] - \ddot{x} - \frac{\dot{x}^2.x}{1+x^2} = 0$
+
+$\frac{x}{(1+x^2)^{3/2}} + \frac{x+x.\sqrt{x^4/4-x^2+1}-\dot{x}^2.x}{1+x^2} -a.\frac{x+x.\sqrt{x^4/4-x^2+1}}{(1+x^2).\sqrt{1+x^4/4}} - \ddot{x}= 0$
+  
 % \[mg.\cos(\tan^{-1}(x_0)) + k(l-l_0).\cos(\tan^{-1}(x_0) - \tan^{-1}(\frac{y_0-1}{x_0}))=\sqrt{\ddot{x}^2+\ddot{y}^2}\]
  %En développant on a:\[mg.\cos(\tan^{-1}(x)) + k(\sqrt{(x^2/2-1)^2+x^2}-l_0).\cos(\tan^{-1}(x) - \tan^{-1}(\frac{x^2/2-1}{x})) - \sqrt{\ddot{x}^2+1}=0\]
 
