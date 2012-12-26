@@ -85,8 +85,8 @@ On calcule la pente a de la tige parabolique. $a=\frac{\partial y}{\partial x}=\
 En $M(x_0,y_0)$ la pente a de la tige parabolique vaut donc $x_0$.
 Cette pente a nous permet de calculer l'angle $\alpha$. En effet, on remarque graphiquement que $\tan(\alpha)=\frac{1}{a}$. On en déduit: $\alpha=\tan^{-1}(\frac{1}{x_0})$\\
 Au final on trouve donc: $P_t=P.\cos(\tan^{-1}(\frac{1}{x_0})) $\\
-Or $\cos(\tan^{-1}(x))=\frac{1}{1+x^2}$  On en déduit donc: $P_t=P.\frac{1}{1+1/x^2_0}$ D'où: 
-\[\fbox{$P_t=P.\frac{x_0}{1+x^2_0}$}\]
+Or $\cos(\tan^{-1}(x))=\frac{1}{\sqrt{1+x^2}}$  On en déduit donc: $P_t=P.\frac{1}{\sqrt{1+1/x^2_0}}$ D'où: 
+\[\fbox{$P_t=P.\frac{x_0}{\sqrt{1+x^2_0}}$}\]
 
 \subsection{Projection de la tension du ressort su la composante tangentielle}
 On projette désormais $\vec{T}$ sur $\vec{u_t}$.\\
@@ -147,17 +147,24 @@ A l'aide de ce qu'on a calculé précédemment on développe l'équation $mg_t+T
 On obtient alors: 
 \subsubsection{Equa diff de Guillaume}
 En développant et en prenant k=m, g=1 et $a=l_0$ (données de l'énoncé), on obtient :\\
-$m.1.\frac{x}{1+x^2} + m(\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - m.\ddot{x}.\sqrt{1+x^2} - m.\frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$ \\
+$m.1.\frac{x}{\sqrt{1+x^2}} + m(\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - m.\ddot{x}.\sqrt{1+x^2} - m.\frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$ \\
  
-$\frac{x}{1+x^2} + (\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
+$\frac{x}{\sqrt{1+x^2}} + (\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
   
-$\frac{x}{1+x^2} + (\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \frac{x}{\sqrt{1+x^2}}.\sqrt{\frac{x^4/4-x^2+1}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
+$\frac{x}{\sqrt{1+x^2}} + (\sqrt{x^4/4+1}-a).[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \frac{x}{\sqrt{1+x^2}}.\sqrt{\frac{x^4/4-x^2+1}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
   
-$\frac{x}{1+x^2} + [\frac{x}{\sqrt{1+x^2}} + \frac{x.\sqrt{x^4/4-x^2+1}}{\sqrt{1+x^2}}] -a.[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \frac{x}{\sqrt{1+x^2}}.\sqrt{\frac{x^4/4-x^2+1}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
+$\frac{x}{\sqrt{1+x^2}} + [\frac{x}{\sqrt{1+x^2}} + \frac{x.\sqrt{x^4/4-x^2+1}}{\sqrt{1+x^2}}] -a.[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \frac{x}{\sqrt{1+x^2}}.\sqrt{\frac{x^4/4-x^2+1}{1+x^4/4}}] - \ddot{x}.\sqrt{1+x^2} - \frac{\dot{x}^2.x}{\sqrt{1+x^2}} = 0$
  
-$\frac{x}{(1+x^2)^{3/2}} + [\frac{x}{1+x^2} + \frac{x.\sqrt{x^4/4-x^2+1}}{1+x^2}] -a.[\frac{x}{(1+x^2).\sqrt{1+x^4/4}} +\frac{x.\sqrt{x^4/4-x^2+1}}{(1+x^2).\sqrt{1+x^4/4}}] - \ddot{x} - \frac{\dot{x}^2.x}{1+x^2} = 0$
+$\frac{x}{1+x^2} + [\frac{x}{1+x^2} + \frac{x.\sqrt{x^4/4-x^2+1}}{1+x^2}] -a.[\frac{x}{(1+x^2).\sqrt{1+x^4/4}} +\frac{x.\sqrt{x^4/4-x^2+1}}{(1+x^2).\sqrt{1+x^4/4}}] - \ddot{x} - \frac{\dot{x}^2.x}{1+x^2} = 0$
 
-$\frac{x}{(1+x^2)^{3/2}} + \frac{x+x.\sqrt{x^4/4-x^2+1}-\dot{x}^2.x}{1+x^2} -a.\frac{x+x.\sqrt{x^4/4-x^2+1}}{(1+x^2).\sqrt{1+x^4/4}} - \ddot{x}= 0$
+$\frac{2x+x.\sqrt{x^4/4-x^2+1}-\dot{x}^2.x}{1+x^2} -a.\frac{x+x.\sqrt{x^4/4-x^2+1}}{(1+x^2).\sqrt{1+x^4/4}} - \ddot{x}= 0$
+
+$-\frac{2x+x.\sqrt{x^4/4-x^2+1}-\dot{x}^2.x}{1+x^2} +a.\frac{x+x.\sqrt{x^4/4-x^2+1}}{(1+x^2).\sqrt{1+x^4/4}} + \ddot{x}= 0$
+
+$-\frac{2x+x.\sqrt{(x^2/2-1)^2}-\dot{x}^2.x}{1+x^2} +a.\frac{x+x.\sqrt{(x^2/2-1)^2}}{(1+x^2).\sqrt{1+x^4/4}} + \ddot{x}= 0$
+
+\[ \fbox{$\frac{-x^3/2-x+\dot{x}^2x}{1+x^2} + \frac{a.x^3}{2(1+x^2).\sqrt{1+x^4/4}} + \ddot{x}= 0$} \]
+  
   
 % \[mg.\cos(\tan^{-1}(x_0)) + k(l-l_0).\cos(\tan^{-1}(x_0) - \tan^{-1}(\frac{y_0-1}{x_0}))=\sqrt{\ddot{x}^2+\ddot{y}^2}\]
  %En développant on a:\[mg.\cos(\tan^{-1}(x)) + k(\sqrt{(x^2/2-1)^2+x^2}-l_0).\cos(\tan^{-1}(x) - \tan^{-1}(\frac{x^2/2-1}{x})) - \sqrt{\ddot{x}^2+1}=0\]
@@ -167,7 +174,7 @@ On calcule maintenant l'équatio ndifférentielle du système en s'aidant des r�
 On part de l'équation $ P_t+T_t=ma_t $\\
 avec $T_t=k(l-l_0)$ et $P_t=-mg$\\
 En développant les expression on obtient :\\
-$k(\sqrt{x^4/4+1}-l_0)\times \frac{x^3}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}-mg\frac{x}{1+x^2}=m(\ddot{x}\sqrt{1+x^2}+\frac{\ddot{x}^2x}{\sqrt{1+x^2}})$\\
+$k(\sqrt{x^4/4+1}-l_0)\times \frac{x^3}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}-mg\frac{x}{\sqrt{1+x^2}}=m(\ddot{x}\sqrt{1+x^2}+\frac{\ddot{x}^2x}{\sqrt{1+x^2}})$\\
 $ \frac{k}{m}(\frac{x^3}{2\sqrt{1+x^2}}-\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}})-\frac{xg}{\sqrt{1+x^2}}-\ddot{x}\sqrt{1+x^2}-\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
 En prenant k=m, g=1 et $a=l_0$ (données de l'énoncé), on obtient :\\
 $ -\frac{x^3}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\frac{x}{\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
