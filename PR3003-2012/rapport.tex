@@ -183,6 +183,48 @@ $ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\s
 $ (-\frac{x^3}{2}+x)\frac{1}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}+\ddot{x}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
 \[ \fbox{$ \ddot{x}+\frac{\dot{x}^2x-x^3/2-x}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0 $}\]
 
+\section{Détermination des points d'équilibre}
+Les points d'équilibre sont les points où la vitesse du système et donc de la masselotte est nulle. Ainsi, les tèrmes lié à la vitesse et à l'accélération du système sont nuls.\\
+On part donc de l'équation :\\
+$ \ddot{x}+\frac{\dot{x}^2x-x^3/2-x}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0 $
+où 
+$\ddot{x}=\frac{\dot{x}^2x-x^3/2-x}{1+x^2}=0$\\
+Ainsi on a :\\
+$\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0$\\
+En multipliant de part et d'autre de l'équation par $\frac{2(1+x^2)}{x}$ :\\
+$x^2-\frac{x^2\times l_0}{\sqrt{1+x^4/4}}+2=0$
+$\sqrt{1+x^\frac{4}{4}}(x^2+2)=x^2\times l_0$\\
+$\sqrt{1+y^2}(2y+2)=2yl_0$\\
+$(1+y^2)(4y^2+8y+4)=4y^2\times l_0^2$\\
+$(1+y^2)(y^2+2y+1)=y^2\times l_0^2$\\
+$(\frac{1}{y}+y)(y+2+\frac{1}{y})=l_0^2$\\
+On pose $X=y+\frac{1}{y}$ ($y\neq 0$):\\
+$X(X+2)=l_0^2$\\
+$x^2+2X-l_0^2=0$\\
+Dont on calcule le déterminant :
+$\Delta_X=4(1+l_0^2)$\\
+D'où les solutions intermédiaires :
+$X_1=-1-\sqrt{1+l_0^2}$\\
+$X_2=-1+\sqrt{1+l_0^2}$\\
+$y+\frac{1}{y}=X$\\
+$y^2+1=Xy$\\
+$y^2-Xy+1=0$\\
+Dont le déterminant est :
+$\Delta_y=X^2-4$\\
+D'où les solutions :
+$y_1=\frac{1}{2}(X-\sqrt{X^2-4})$\\
+$y_1=\frac{1}{2}(X+\sqrt{X^2-4})$\\
+On peut alors trouver l'expression des points d'équilibre $y_1,y_2,y_3,y_4$ en fonction de $l_0$ :\\
+$y_1=\frac{1}{2}(X_1-\sqrt{X_1-4})=\frac{-1-\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-1-\sqrt{1+l_0^2})-4})$\\
+$=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1+2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
+$=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{2+2\sqrt{1+l_0^2}+l_0^2-4}$\\
+$y_2=\frac{X_1+\sqrt{X_1-4}}{2}=\frac{1}{2}(-1-\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{2+2\sqrt{1+l_0^2}+l_0^2-4}$\\
+$y_3=\frac{X_2-\sqrt{X_2-4}}{2}=\frac{-1+\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-1+\sqrt{1+l_0^2})-4})$\\
+$=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1-2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
+$=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{2-2\sqrt{1+l_0^2}+l_0^2-4}$\\
+$y_4=\frac{1}{2}(-1+\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{2-2\sqrt{1+l_0^2}+l_0^2-4}$\\
+Il reste à déterminer la nature de ces points d'équilibre du système.
+
 \section{Dans toute la suite on supposera que g=1, k=m et on notera $a=l_0$ et on s'intéressera particulièrement par l'équation vérifié par x(t).}
 \subsection{Montrer que l'équation est de la forme: (E) $\ddot{x} + f(x,\dot{x},a) = 0$.}
 \subsection{Déterminer en fonction de a les points d'équilibres du système.}
@@ -201,9 +243,5 @@ $ (-\frac{x^3}{2}+x)\frac{1}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}+\
 \subsection{Représenter le diagramme de Matlab le diagramme de bifurcation  en $(a,\gamma)$ pour chacun des points d'équilibres.}
 \subsection{On suppose que $a=\sqrt{15}$. Pour quelles valeurs (exactes) de $\gamma$ les points d'équilibres attractifs changent-ils de nature.}
 \subsection{Représenter le portrait de phase pour $\gamma=1, \gamma=2, \gamma=3.$}
-
-
-
-
 
 \end{document} 
