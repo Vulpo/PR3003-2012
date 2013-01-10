@@ -10,6 +10,7 @@
 \usepackage{float} %pour que l'option "H" fonctionne dans figure.
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{hyperref} % lien hypertext
+\reversemarginpar  %notes à gauche au lieu d'à droite
 %\hypersetup{pdfborder={0 0 0}}
 
 \begin{document}
@@ -224,6 +225,51 @@ $=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1-2\sqrt{1+l_0^2}+(1+l_0^2)-4}
 $=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{2-2\sqrt{1+l_0^2}+l_0^2-4}$\\
 $y_4=\frac{1}{2}(-1+\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{2-2\sqrt{1+l_0^2}+l_0^2-4}$\\
 Il reste à déterminer la nature de ces points d'équilibre du système.
+
+\section{Determination de la nature des poitns d'équilibre}
+Nous sommes dans le cas d'un système non linéaire. \marginpar{==> p.25}
+On pose $x_1=x, x_2=\dot{x}$
+On a alors :
+\[\dot{x_1}=x_2=f_1(x_1*,x_2*)\]
+\[\dot{x_2}=\frac{x_1^3\times l_0}{2\sqrt{1+\frac{x_1^4}{4}(1+x_1^2)}}-\frac{x_1^3}{2(1+x_1^2)}-\frac{x_2^2x_1}{1+x_1^2}=f_2(x_1,x_2)\]
+Aux points d'équilibre, la vitesse est nulle d'où $x_2=0$ et $\dot{x_2}=0$\\
+D'où :\\
+\[ f_1(x_1*,0) = 0 \]
+\[ f_2(x_1*,0) = \frac{x_1^3\times l_0}{2\sqrt{1+\frac{x_1^4}{4}(1+x_1^2)}}-\frac{x_1^3}{2(1+x_1^2)} \]
+On va calculer la nature des points d'équilibre en passant par la matrice Jacobienne :\\
+\[
+J_f=
+\begin{pmatrix}
+\frac{\delta f_1}{dx_1} & \frac{\delta f_1}{dx_2} \\
+\frac{\delta f_2}{dx_1} & \frac{\delta f_2}{dx_2}
+\end{pmatrix}
+=
+\begin{pmatrix}
+0&1\\
+\frac{\delta f_2}{dx_1}&0
+\end{pmatrix}
+\]
+Il faut alors déterminer $\frac{\delta f_2}{dx_1}$ : \\
+\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
+Détail du calcul de  $\frac{\delta f_2}{dx_1}$ :\\
+(VIDE !!! voir lune à plume, je vois de quoi je parle)\\
+
+On peut alors calculer les propriétés de la matrice (respectivement Déterminant, Trace, Discriminant de du polynôme caractéristique) :\\
+\[ det(J_f) =  \frac{\delta f_2}{dx_1} \]
+\[ tr(J_f) = 0 \]
+\[ \Delta(J_f) = tr(J_f) - 4\times det(J_f) = 4\frac{\delta f_2}{dx_1}\]
+Pour connaitre la nature du point d'équilibre, il nous reste plus qu'à étudier le signe de $\frac{\delta f_2}{dx_1}$ :\\
+\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
+D'après la question précédente, on a en tout point d'équilibre $\sqrt{1+\frac{x^4}{4}}=\frac{x^2l_0}{x^2+2}$, d'où : \\
+\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - \frac{1}{2}(x^2+2)^2(1+x^2)\frac{l_0x^6}{\frac{(x^2l_0)^2}{(x^2+2)}}}{2(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
+\[ =\frac{-\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4}{2(1+x^2)^2} \]
+
+(Jusqu'à là, je suis sur que c'était la bonne méthode. Le remplacement de $\sqrt{1+\frac{x^4}{4}}=\frac{x^2l_0}{x^2+2}$ est lui-aussi bon) \\
+
+Le dénominateur étant positif pour tout x, on cherche le signe du numérateur, c-à-d de :\\
+\[ -\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4 \]
+
+
 
 \section{Dans toute la suite on supposera que g=1, k=m et on notera $a=l_0$ et on s'intéressera particulièrement par l'équation vérifié par x(t).}
 \subsection{Montrer que l'équation est de la forme: (E) $\ddot{x} + f(x,\dot{x},a) = 0$.}
