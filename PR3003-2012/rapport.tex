@@ -213,18 +213,28 @@ $y^2-Xy+1=0$\\
 Dont le déterminant est :
 $\Delta_y=X^2-4$\\
 D'où les solutions :
-$y_1=\frac{1}{2}(X-\sqrt{X^2-4})$\\
-$y_1=\frac{1}{2}(X+\sqrt{X^2-4})$\\
-On peut alors trouver l'expression des points d'équilibre $y_1,y_2,y_3,y_4$ en fonction de $l_0$ :\\
-$y_1=\frac{1}{2}(X_1-\sqrt{X_1-4})=\frac{-1-\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-1-\sqrt{1+l_0^2})-4})$\\
+$y=\frac{1}{2}(X-\sqrt{X^2-4})$\\
+$y=\frac{1}{2}(X+\sqrt{X^2-4})$\\
+On peut alors trouver l'expression des ordonnées des points d'équilibre $y_1,y_2,y_3,y_4$ en fonction de $l_0$ :\\
+$y_1=\frac{1}{2}(X_1-\sqrt{X_1-4})=\frac{-1-\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-1-\sqrt{1+l_0^2})^2-4})$\\
 $=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1+2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
-$=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{2+2\sqrt{1+l_0^2}+l_0^2-4}$\\
-$y_2=\frac{X_1+\sqrt{X_1-4}}{2}=\frac{1}{2}(-1-\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{2+2\sqrt{1+l_0^2}+l_0^2-4}$\\
-$y_3=\frac{X_2-\sqrt{X_2-4}}{2}=\frac{-1+\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-1+\sqrt{1+l_0^2})-4})$\\
+$=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}$\\
+$y_2=\frac{X_1+\sqrt{X_1-4}}{2}=\frac{1}{2}(-1-\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}$\\
+$y_3=\frac{X_2-\sqrt{X_2-4}}{2}=\frac{-1+\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-1+\sqrt{1+l_0^2})^2-4})$\\
 $=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1-2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
-$=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{2-2\sqrt{1+l_0^2}+l_0^2-4}$\\
-$y_4=\frac{1}{2}(-1+\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{2-2\sqrt{1+l_0^2}+l_0^2-4}$\\
+$=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}$\\
+$y_4=\frac{1}{2}(-1+\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}$\\
+En considérant $y=\frac{x^2}{2} \Longrightarrow x=\pm \sqrt{2y}$ on a au total 8 points d'équilibre :\\
+$x_1=\sqrt{-1-\sqrt{1+l_0^2}-\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
+$x_2=-\sqrt{-1-\sqrt{1+l_0^2}-\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
+$x_3=\sqrt{-1-\sqrt{1+l_0^2}+\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
+$x_4=-\sqrt{-1-\sqrt{1+l_0^2}+\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
+$x_5=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
+$x_6=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
+$x_7=\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
+$x_8=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
 Il reste à déterminer la nature de ces points d'équilibre du système.
+
 
 \section{Determination de la nature des poitns d'équilibre}
 Nous sommes dans le cas d'un système non linéaire. \marginpar{==> p.25}
@@ -252,7 +262,7 @@ J_f=
 Il faut alors déterminer $\frac{\delta f_2}{dx_1}$ : \\
 \[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
 Détail du calcul de  $\frac{\delta f_2}{dx_1}$ :\\
-(VIDE !!! voir lune à plume, je vois de quoi je parle)\\
+(VIDE !!! voir lune à plume, je vois de quoi je parle. Pour info, c'est du calcul brut, pas "d'astuce")\\
 
 On peut alors calculer les propriétés de la matrice (respectivement Déterminant, Trace, Discriminant de du polynôme caractéristique) :\\
 \[ det(J_f) =  \frac{\delta f_2}{dx_1} \]
