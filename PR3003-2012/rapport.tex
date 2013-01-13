@@ -189,11 +189,12 @@ Les points d'équilibre sont les points où la vitesse du système et donc de la
 On part donc de l'équation :\\
 $ \ddot{x}+\frac{\dot{x}^2x-x^3/2-x}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0 $
 où 
-$\ddot{x}=\frac{\dot{x}^2x-x^3/2-x}{1+x^2}=0$\\
+%$\ddot{x}=\frac{\dot{x}^2x-x^3/2-x}{1+x^2}=0$\\
+$\ddot{x}=0$ et $\dot{x}=0$
 Ainsi on a :\\
-$\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0$\\
+$\frac{-x^3/2-x}{1+x^2} + \frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0$ \\
 En multipliant de part et d'autre de l'équation par $\frac{2(1+x^2)}{x}$ :\\
-$x^2-\frac{x^2\times l_0}{\sqrt{1+x^4/4}}+2=0$
+$x^2-\frac{x^2\times l_0}{\sqrt{1+x^4/4}}+2=0$\\
 $\sqrt{1+x^\frac{4}{4}}(x^2+2)=x^2\times l_0$\\
 $\sqrt{1+y^2}(2y+2)=2yl_0$\\
 $(1+y^2)(4y^2+8y+4)=4y^2\times l_0^2$\\
@@ -201,7 +202,7 @@ $(1+y^2)(y^2+2y+1)=y^2\times l_0^2$\\
 $(\frac{1}{y}+y)(y+2+\frac{1}{y})=l_0^2$\\
 On pose $X=y+\frac{1}{y}$ ($y\neq 0$):\\
 $X(X+2)=l_0^2$\\
-$x^2+2X-l_0^2=0$\\
+$X^2+2X-l_0^2=0$\\
 Dont on calcule le déterminant :
 $\Delta_X=4(1+l_0^2)$\\
 D'où les solutions intermédiaires :
@@ -236,7 +237,7 @@ $x_8=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
 Il reste à déterminer la nature de ces points d'équilibre du système.
 
 
-\section{Determination de la nature des poitns d'équilibre}
+\section{Détermination de la nature des points d'équilibre}
 Nous sommes dans le cas d'un système non linéaire. \marginpar{==> p.25}
 On pose $x_1=x, x_2=\dot{x}$
 On a alors :
