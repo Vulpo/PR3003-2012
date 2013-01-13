@@ -186,13 +186,14 @@ $ (-\frac{x^3}{2}+x)\frac{1}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}+\
 
 \section{Détermination des points d'équilibre}
 Les points d'équilibre sont les points où la vitesse du système et donc de la masselotte est nulle. Ainsi, les tèrmes lié à la vitesse et à l'accélération du système sont nuls.\\
-On part donc de l'équation :\\
+Les points d'équilibres correspondent aux solutions de l'équation :\\
 $ \ddot{x}+\frac{\dot{x}^2x-x^3/2-x}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0 $
 où 
 %$\ddot{x}=\frac{\dot{x}^2x-x^3/2-x}{1+x^2}=0$\\
 $\ddot{x}=0$ et $\dot{x}=0$
 Ainsi on a :\\
 $\frac{-x^3/2-x}{1+x^2} + \frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0$ \\
+Une première solution correspond à $x_0=0$ et $y_0=0$ \\
 En multipliant de part et d'autre de l'équation par $\frac{2(1+x^2)}{x}$ :\\
 $x^2-\frac{x^2\times l_0}{\sqrt{1+x^4/4}}+2=0$\\
 $\sqrt{1+x^\frac{4}{4}}(x^2+2)=x^2\times l_0$\\
@@ -217,6 +218,7 @@ D'où les solutions :
 $y=\frac{1}{2}(X-\sqrt{X^2-4})$\\
 $y=\frac{1}{2}(X+\sqrt{X^2-4})$\\
 On peut alors trouver l'expression des ordonnées des points d'équilibre $y_1,y_2,y_3,y_4$ en fonction de $l_0$ :\\
+$y_0=0$\\
 $y_1=\frac{1}{2}(X_1-\sqrt{X_1-4})=\frac{-1-\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-1-\sqrt{1+l_0^2})^2-4})$\\
 $=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1+2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
 $=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}$\\
@@ -225,7 +227,8 @@ $y_3=\frac{X_2-\sqrt{X_2-4}}{2}=\frac{-1+\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-
 $=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1-2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
 $=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}$\\
 $y_4=\frac{1}{2}(-1+\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}$\\
-En considérant $y=\frac{x^2}{2} \Longrightarrow x=\pm \sqrt{2y}$ on a au total 8 points d'équilibre :\\
+En considérant $y=\frac{x^2}{2} \Longrightarrow x=\pm \sqrt{2y}$ on a au total 9 points d'équilibre :\\
+$x_0=0$ (Déterminé au début)\\
 $x_1=\sqrt{-1-\sqrt{1+l_0^2}-\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
 $x_2=-\sqrt{-1-\sqrt{1+l_0^2}-\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
 $x_3=\sqrt{-1-\sqrt{1+l_0^2}+\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
@@ -279,6 +282,24 @@ D'après la question précédente, on a en tout point d'équilibre $\sqrt{1+\fra
 
 Le dénominateur étant positif pour tout x, on cherche le signe du numérateur, c-à-d de :\\
 \[ -\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4 \]
+
+%Thibault:
+Etude de signe du polynome:\\
+on pose, \[ -\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4 \] = 0\\
+
+Le polynôme est factorisable par x² et on obtient un polynome d'ordre 8\\
+$-1x^8/l_0-7x^6/l_0-18x^4/l_0+x^2(n 6l_0-1-20/l_0)+(8l_0-1-8l_0) = 0\\
+on pose V = -1/l_0   y = (6l_0-1-20/l_0)   z = (8l_0-1-8/l_0)\\
+on a: Vx^8+7Vx^6+18Vx^4+Yx^2+Z = 0\\
+le polynome est d'ordre 8 c'est donc un ordre pair donc il admet au maximum deux racines.\\
+Or le coefficient de l'ordre 8 est impair et z est négatif donc le polynome admet deux racines de signes contraires.\\
+
+on peut donc factoriser le polynome par un polynome d'ordre 6 et par un polynome d'ordre 2\\
+
+
+
+
+
 
 
 
