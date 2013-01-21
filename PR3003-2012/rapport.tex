@@ -184,7 +184,9 @@ $ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\s
 $ (-\frac{x^3}{2}+x)\frac{1}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}+\ddot{x}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
 \[ \fbox{$ \ddot{x}+\frac{\dot{x}^2x-x^3/2-x}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0 $}\]
 
+\section{Dans toute la suite on supposera que g=1, k=m et on notera $a=l_0$ et on s'intéressera particulièrement par l'équation vérifié par x(t).}
 \section{Détermination des points d'équilibre}
+
 Les points d'équilibre sont les points où la vitesse du système et donc de la masselotte est nulle. Ainsi, les tèrmes lié à la vitesse et à l'accélération du système sont nuls.\\
 Les points d'équilibres correspondent aux solutions de l'équation :\\
 $ \ddot{x}+\frac{\dot{x}^2x-x^3/2-x}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0 $
@@ -239,17 +241,24 @@ $x_7=\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
 $x_8=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
 Il reste à déterminer la nature de ces points d'équilibre du système.
 
-
 \section{Détermination de la nature des points d'équilibre}
 Nous sommes dans le cas d'un système non linéaire. \marginpar{==> p.25}
 On pose $x_1=x, x_2=\dot{x}$
 On a alors :
 \[\dot{x_1}=x_2=f_1(x_1*,x_2*)\]
-\[\dot{x_2}=\frac{x_1^3\times l_0}{2\sqrt{1+\frac{x_1^4}{4}(1+x_1^2)}}-\frac{x_1^3}{2(1+x_1^2)}-\frac{x_2^2x_1}{1+x_1^2}=f_2(x_1,x_2)\]
+\[\dot{x_2}=\frac{x_1^3\times l_0}{2\sqrt{1+\frac{x_1^4}{4}(1+x_1^2)}}-\frac{x_1^3}{2(1+x_1^2)}-\frac{x_2^2x_1}{1+x_1^2}=f_2(x_1,x_2)\]\\
+
+Pour tib et moi:\\
+\[ \dot{x_1}=x_2 \]
+\[ \dot{x_2}=-\frac{x^2_2.x_1}{1+x^2_1} + \frac{-x^3_1}{2(1+x^2_1)} + \frac{x_1}{1+x^2_1} - \frac{ax^3_1}{2(1+x^2_1)(x^4_1/4 + 1)} \]
+
+
+
 Aux points d'équilibre, la vitesse est nulle d'où $x_2=0$ et $\dot{x_2}=0$\\
 D'où :\\
 \[ f_1(x_1*,0) = 0 \]
 \[ f_2(x_1*,0) = \frac{x_1^3\times l_0}{2\sqrt{1+\frac{x_1^4}{4}(1+x_1^2)}}-\frac{x_1^3}{2(1+x_1^2)} \]
+
 On va calculer la nature des points d'équilibre en passant par la matrice Jacobienne :\\
 \[
 J_f=
@@ -268,10 +277,10 @@ Il faut alors déterminer $\frac{\delta f_2}{dx_1}$ : \\
 Détail du calcul de  $\frac{\delta f_2}{dx_1}$ :\\
 (VIDE !!! voir lune à plume, je vois de quoi je parle. Pour info, c'est du calcul brut, pas "d'astuce")\\
 
-On peut alors calculer les propriétés de la matrice (respectivement Déterminant, Trace, Discriminant de du polynôme caractéristique) :\\
+On peut alors calculer les propriétés de la matrice (respectivement Déterminant, Trace, Discriminant du polynôme caractéristique) :\\
 \[ det(J_f) =  \frac{\delta f_2}{dx_1} \]
 \[ tr(J_f) = 0 \]
-\[ \Delta(J_f) = tr(J_f) - 4\times det(J_f) = 4\frac{\delta f_2}{dx_1}\]
+\[ \Delta(J_f) = tr(J_f)^2 - 4\times det(J_f) = 4\frac{\delta f_2}{dx_1}\]
 Pour connaitre la nature du point d'équilibre, il nous reste plus qu'à étudier le signe de $\frac{\delta f_2}{dx_1}$ :\\
 \[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
 D'après la question précédente, on a en tout point d'équilibre $\sqrt{1+\frac{x^4}{4}}=\frac{x^2l_0}{x^2+2}$, d'où : \\
@@ -302,14 +311,32 @@ on peut donc factoriser le polynome par un polynome d'ordre 6 et par un polynome
 
 
 
-\section{Dans toute la suite on supposera que g=1, k=m et on notera $a=l_0$ et on s'intéressera particulièrement par l'équation vérifié par x(t).}
-\subsection{Montrer que l'équation est de la forme: (E) $\ddot{x} + f(x,\dot{x},a) = 0$.}
-\subsection{Déterminer en fonction de a les points d'équilibres du système.}
-\subsection{Quelle est en fonction de a, la nature des points d'équilibres.}
+
 
 \section{On suppose que $a=\sqrt{15}$.}
 \subsection{Déterminer la valeur exacte des points d'équilibres du système.}
 \subsection{Déterminer l'intégrale première du système.}
+	On rappelle que $v=\dot{x}\sqrt{1 + x^2}$ et $\frac{\delta{v}}{\delta{t}}=\ddot{x}\sqrt{1 + x^2} + \frac{\dot{x}^2.x}{\sqrt{1+x^2}}$ \\
+On va intégrer cette équation différentielle.
+\[  \ddot{x}+\frac{\dot{x}^2x}{1+x^2} - \frac{1}{2}\frac{x^3}{1+x^2} - \frac{x}{1+x^2} - \frac{a.x^3}{2(1+x^2)\sqrt{x^4/4+1}}=0 \]	
+On multiplie cette équation par $\sqrt{1+x^2}$:
+
+\[  \ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}} - \frac{1}{2}\frac{x^3}{\sqrt{1+x^2}} - \frac{x}{\sqrt{1+x^2}} - \frac{a.x^3}{2\sqrt{1+x^2}\sqrt{x^4/4+1}}=0 \]	
+
+On remarque ainsi que l'équation s'écrit de la forme:\\
+\[ \frac{\delta{v}}{\delta{t}} + \sqrt{1+x^2}f(x) = 0 \] avec $f(x)= - \frac{1}{2}\frac{x^3}{1+x^2} - \frac{x}{1+x^2} - \frac{a.x^3}{2(1+x^2)\sqrt{x^4/4+1}}$ \\
+On multiplie cette équation par v. On a alors:\\
+$ v.\frac{\delta{v}}{\delta{t}} + \dot{x}(1+x^2)f(x) = 0$\\
+En intégrant l'équation, on a alors:\\
+$ \int v.\frac{\delta{v}}{\delta{t}} + \dot{x}(1+x^2)f(x) dt= C$\\
+Ce qui revient à écrire:\\
+$ \int vdv + \int (1+x^2)f(x)dx= C$\\
+En intégrant l'équation, on obtient:\\
+\[\fbox{$ \frac{1}{2}\dot{x}^2(1+x^2) - \frac{1}{8}x^4 - \frac{x^2}{2} + a\sqrt{\frac{x^4}{4} + 1} = C  $}\]
+
+ 
+
+	
 \subsection{Représenter le portrait de phase.}
 \subsection{Que peut-on en déduire sur le mouvement.}
 
