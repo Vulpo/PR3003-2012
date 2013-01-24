@@ -318,13 +318,13 @@ on peut donc factoriser le polynôme par un polynôme d'ordre 6 et par un polyn�
 \subsection{Déterminer l'intégrale première du système.}
 	On rappelle que $v=\dot{x}\sqrt{1 + x^2}$ et $\frac{\delta{v}}{\delta{t}}=\ddot{x}\sqrt{1 + x^2} + \frac{\dot{x}^2.x}{\sqrt{1+x^2}}$ \\
 On va intégrer cette équation différentielle.
-\[  \ddot{x}+\frac{\dot{x}^2x}{1+x^2} - \frac{1}{2}\frac{x^3}{1+x^2} - \frac{x}{1+x^2} - \frac{a.x^3}{2(1+x^2)\sqrt{x^4/4+1}}=0 \]	
+\[  \ddot{x}+\frac{\dot{x}^2x}{1+x^2} + \frac{1}{2}\frac{x^3}{1+x^2} + \frac{x}{1+x^2} - \frac{a.x^3}{2(1+x^2)\sqrt{x^4/4+1}}=0 \]	
 On multiplie cette équation par $\sqrt{1+x^2}$:
 
-\[  \ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}} - \frac{1}{2}\frac{x^3}{\sqrt{1+x^2}} - \frac{x}{\sqrt{1+x^2}} - \frac{a.x^3}{2\sqrt{1+x^2}\sqrt{x^4/4+1}}=0 \]	
+\[  \ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}} + \frac{1}{2}\frac{x^3}{\sqrt{1+x^2}} + \frac{x}{\sqrt{1+x^2}} - \frac{a.x^3}{2\sqrt{1+x^2}\sqrt{x^4/4+1}}=0 \]	
 
 On remarque ainsi que l'équation s'écrit de la forme:\\
-\[ \frac{\delta{v}}{\delta{t}} + \sqrt{1+x^2}f(x) = 0 \] avec $f(x)= - \frac{1}{2}\frac{x^3}{1+x^2} - \frac{x}{1+x^2} - \frac{a.x^3}{2(1+x^2)\sqrt{x^4/4+1}}$ \\
+\[ \frac{\delta{v}}{\delta{t}} + \sqrt{1+x^2}f(x) = 0 \] avec $f(x)=  \frac{1}{2}\frac{x^3}{\sqrt{1+x^2}} + \frac{x}{\sqrt{1+x^2}} - \frac{a.x^3}{2\sqrt{1+x^2}\sqrt{x^4/4+1}}$ \\
 On multiplie cette équation par v. On a alors:\\
 $ v.\frac{\delta{v}}{\delta{t}} + \dot{x}(1+x^2)f(x) = 0$\\
 En intégrant l'équation, on a alors:\\
@@ -332,7 +332,8 @@ $ \int v.\frac{\delta{v}}{\delta{t}} + \dot{x}(1+x^2)f(x) dt= C$\\
 Ce qui revient à écrire:\\
 $ \int vdv + \int (1+x^2)f(x)dx= C$\\
 En intégrant l'équation, on obtient:\\
-\[\fbox{$ \frac{1}{2}\dot{x}^2(1+x^2) - \frac{1}{8}x^4 - \frac{x^2}{2} + a\sqrt{\frac{x^4}{4} + 1} = C  $}\]
+%\[\fbox{$ \frac{1}{2}\dot{x}^2(1+x^2) - \frac{1}{8}x^4 - \frac{x^2}{2} + a\sqrt{\frac{x^4}{4} + 1} = C  $}\]
+\[\fbox{$ \frac{1}{2}v^2 + \frac{1}{8}x^4 + \frac{x^2}{2} - a\sqrt{\frac{x^4}{4} + 1} = C  $}\]
 
  
 
