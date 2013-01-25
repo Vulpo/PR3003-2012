@@ -216,52 +216,69 @@ $y^2+1=Xy$\\
 $y^2-Xy+1=0$\\
 Dont le déterminant est :
 $\Delta_y=X^2-4$\\
-D'où les solutions :
+D'où les solutions :\\
 $y=\frac{1}{2}(X-\sqrt{X^2-4})$\\
 $y=\frac{1}{2}(X+\sqrt{X^2-4})$\\
+Cependant, il faut savoir que $\Delta_y$ doit être positif afin que les racines soient rélles.\\
+
+%ICI METTRE DEMO ELIMINATION DE LA SOLUTION X1
+
+%$\Delta>0 \Rightarrow X^2>4$\\
+%Pour la solution $X=(-1-\sqrt{1+l_0^2})^2$, nous avons deux cas :
+%\begin{itemize}
+%\item $(-1-\sqrt{1+l_0^2})^2 > 2$ qui est une condition irréalisable
+%\item $(-1-\sqrt{1+l_0^2})^2 < -2 \Rightarrow \sqrt{1+l_0^2}>1$ qui est une condition toujours satisfaite.
+%\end{itemize}
+%Finalement, il n'y a aucune condition sur $l_0$ pour l'existance de des solutions de $X_1$.\\
+Pour la solution $X=(-1+\sqrt{1+l_0^2})^2$, nous avons deux cas de condition d'existance :\\
+\begin{itemize}
+\item $(-1+\sqrt{1+l_0^2})^2 > 2 \Rightarrow \sqrt{1+l_0^2}>3\Rightarrow l_0 > \sqrt{8}$
+\item $(-1+\sqrt{1+l_0^2})^2 < -2 \Rightarrow \sqrt{1+l_0^2}<-1$ qu iest une condition irréalisable
+\end{itemize}
+Finalement, on déduit que la condition d'existence des points d'équilibres est $l_0>\sqrt{8}$.
 On peut alors trouver l'expression des ordonnées des points d'équilibre $y_1,y_2,y_3,y_4$ en fonction de $l_0$ :\\
-$y_0=0$\\
-$y_1=\frac{1}{2}(X_1-\sqrt{X_1-4})=\frac{-1-\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-1-\sqrt{1+l_0^2})^2-4})$\\
-$=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1+2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
-$=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}$\\
-$y_2=\frac{X_1+\sqrt{X_1-4}}{2}=\frac{1}{2}(-1-\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}$\\
-$y_3=\frac{X_2-\sqrt{X_2-4}}{2}=\frac{-1+\sqrt{1+l_0^2}}{2}-\frac{1}{2}(\sqrt{(-1+\sqrt{1+l_0^2})^2-4})$\\
-$=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1-2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
+\begin{itemize}
+\item $y_0=0$\\
+(Déterminé précédemment)\\
+\item $y_1=\frac{1}{2}(X_1-\sqrt{X_1-4})=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}(\sqrt{(-1-\sqrt{1+l_0^2})^2-4})$\\
+%$=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1+2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
+%$=\frac{1}{2}(-1-\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}$\\
+Cette solution est strictement négative alors que y(t) est positive, selon la rampe $y=\frac{x^2}{2}$. On doit alors l'éliminer.\\
+\item $y_2=\frac{X_1+\sqrt{X_1-4}}{2}=\frac{1}{2}(-1-\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}$\\
+Cette solution est aussi à éliminer. En effet, nous avons : \\
+$y_2 >0 \Rightarrow (-1-\sqrt{1+l_0^2}+\sqrt{(-1-\sqrt{1+l_0^2})^2+l_0^2} > 0$\\$\Rightarrow \sqrt{(-1-\sqrt{1+l_0^2})^2+l_0^2}>1+\sqrt{1+l_0^2}$\\$ \Rightarrow 0>\sqrt{1+l_0^2}$ ce qui est impossible.
+\item $y_3=\frac{X_2-\sqrt{X_2-4}}{2}=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{(-1+\sqrt{1+l_0^2})^2-4}$\\
+%$=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{1-2\sqrt{1+l_0^2}+(1+l_0^2)-4}$\\
 $=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}$\\
-$y_4=\frac{1}{2}(-1+\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}$\\
-En considérant $y=\frac{x^2}{2} \Longrightarrow x=\pm \sqrt{2y}$ on a au total 9 points d'équilibre :\\
-$x_0=0$ (Déterminé au début)\\
-$x_1=\sqrt{-1-\sqrt{1+l_0^2}-\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
-$x_2=-\sqrt{-1-\sqrt{1+l_0^2}-\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
-$x_3=\sqrt{-1-\sqrt{1+l_0^2}+\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
-$x_4=-\sqrt{-1-\sqrt{1+l_0^2}+\sqrt{-2+2\sqrt{1+l_0^2}+l_0^2}}$\\
-$x_5=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
-$x_6=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
-$x_7=\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
-$x_8=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
+\item $y_4=\frac{1}{2}(-1+\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{(-1+\sqrt{1+l_0^2})^2-4}$\\
+$=\frac{1}{2}(-1+\sqrt{1+l_0^2})+\frac{1}{2}\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}$\\
+\end{itemize}
+Seules deux solutions sont alors retenues, l'unique condition d'existance étant $l_0>\sqrt{8}$.\\
+En considérant $y=\frac{x^2}{2} \Longrightarrow x=\pm \sqrt{2y}$ on a au total 5 points d'équilibre :\\
+$x_0=0$\\
+$x_1=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
+$x_2=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
+$x_3=\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
+$x_4=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
 Il reste à déterminer la nature de ces points d'équilibre du système.
 
 \section{Détermination de la nature des points d'équilibre}
-Nous sommes dans le cas d'un système non linéaire. \marginpar{==> p.25}
-On pose $x_1=x, x_2=\dot{x}$
+Nous sommes dans le cas d'un système non linéaire.
+On pose $x_1=x, x_2=\dot{x}$\\
 On a alors :
 \[\dot{x_1}=x_2=f_1(x_1*,x_2*)\]
-\[\dot{x_2}=\frac{x_1^3\times l_0}{2\sqrt{1+\frac{x_1^4}{4}(1+x_1^2)}}-\frac{x_1^3}{2(1+x_1^2)}-\frac{x_2^2x_1}{1+x_1^2}=f_2(x_1,x_2)\]\\
-
-Pour tib et moi:\\
-\[ \dot{x_1}=x_2 \]
-\[ \dot{x_2}=-\frac{x^2_2.x_1}{1+x^2_1} + \frac{-x^3_1}{2(1+x^2_1)} + \frac{x_1}{1+x^2_1} - \frac{ax^3_1}{2(1+x^2_1)(x^4_1/4 + 1)} \]
+\[ \dot{x_2}=-\frac{x^2_2.x_1}{1+x^2_1} - \frac{x^3_1}{2(1+x^2_1)} - \frac{x_1}{1+x^2_1} + \frac{ax^3_1}{2(1+x^2_1)(x^4_1/4 + 1)}=f_2(x_1,x_2) \]
 
 
 
 Aux points d'équilibre, la vitesse est nulle d'où $x_2=0$ et $\dot{x_2}=0$\\
 D'où :\\
 \[ f_1(x_1*,0) = 0 \]
-\[ f_2(x_1*,0) = \frac{x_1^3\times l_0}{2\sqrt{1+\frac{x_1^4}{4}(1+x_1^2)}}-\frac{x_1^3}{2(1+x_1^2)} \]
+\[ f_2(x_1*,0) = \frac{x_1^3\times l_0}{2\sqrt{1+\frac{x_1^4}{4}}(1+x_1^2)}-\frac{x_1^3}{2(1+x_1^2)} - \frac{x}{1+x^2} \]
 
 On va calculer la nature des points d'équilibre en passant par la matrice Jacobienne :\\
 \[
-J_f=
+J=
 \begin{pmatrix}
 \frac{\delta f_1}{dx_1} & \frac{\delta f_1}{dx_2} \\
 \frac{\delta f_2}{dx_1} & \frac{\delta f_2}{dx_2}
@@ -272,37 +289,105 @@ J_f=
 \frac{\delta f_2}{dx_1}&0
 \end{pmatrix}
 \]
-Il faut alors déterminer $\frac{\delta f_2}{dx_1}$ : \\
-\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
-Détail du calcul de  $\frac{\delta f_2}{dx_1}$ :\\
-(VIDE !!! voir lune à plume, je vois de quoi je parle. Pour info, c'est du calcul brut, pas "d'astuce")\\
 
-On peut alors calculer les propriétés de la matrice (respectivement Déterminant, Trace, Discriminant du polynôme caractéristique) :\\
-\[ det(J_f) =  \frac{\delta f_2}{dx_1} \]
-\[ tr(J_f) = 0 \]
-\[ \Delta(J_f) = tr(J_f)^2 - 4\times det(J_f) = 4\frac{\delta f_2}{dx_1}\]
-Pour connaitre la nature du point d'équilibre, il nous reste plus qu'à étudier le signe de $\frac{\delta f_2}{dx_1}$ :\\
-\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
-D'après la question précédente, on a en tout point d'équilibre $\sqrt{1+\frac{x^4}{4}}=\frac{x^2l_0}{x^2+2}$, d'où : \\
-\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - \frac{1}{2}(x^2+2)^2(1+x^2)\frac{l_0x^6}{\frac{(x^2l_0)^2}{(x^2+2)}}}{2(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
-\[ =\frac{-\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4}{2(1+x^2)^2} \]
+La nature des points d'équilibre du système est définie par la trace, le déterminant, et le discriminant du polynôme caractéristique de la matrice Jacobienne ci-dessus.\\
+$ Tr(J) = 0 $\\
+$ det(J) = -\frac{\delta f_2}{\delta x_1} $\\
+$ \Delta(J) = Tr^2(J) - 4det(J) = 4*frac{\delta f_2}{\delta x_1} $\\
 
-(Jusqu'à là, je suis sur que c'était la bonne méthode. Le remplacement de $\sqrt{1+\frac{x^4}{4}}=\frac{x^2l_0}{x^2+2}$ est lui-aussi bon) \\
+On a alors besoin de déterminer le signe de $frac{\delta f_2}{\delta x_1}$ aux points d'équilibre.\\
 
-Le dénominateur étant positif pour tout x, on cherche le signe du numérateur, c-à-d de :\\
-\[ -\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4 \]
+En factorisant $f_2$, on a : \\
+$f_2=0=-\frac{x}{2(1+x^2)}*(x^2-\frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2)$\\
+car $\ddot(x)=0$ aux points d'équilibre.\\
 
-%Thibault:
-Étude de signe du polynôme:\\
-on pose, \[ -\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4  = 0\]
+Ici, nous avons deux éventualités pour satisfaire cette équation :\\
+\begin{itemize}
+\item cas 1 : $\frac{x}{1+x^2}=0$\\
+\item cas 2 : $x^2-\frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2=0$\\
+\end{itemize}
 
-Le polynôme est factorisable par $x^2$ et on obtient un polynôme d'ordre 8\\
-$-1x^8/l_0-7x^6/l_0-18x^4/l_0+x^2(n 6l_0-1-20/l_0)+(8l_0-1-8l_0) = 0$\\
-On pose :\\ $V = -1/l_0$\\   $Y = (6l_0-1-20/l_0)$\\   $Z = (8l_0-1-8/l_0)$\\
-on a: $Vx^8+7Vx^6+18Vx^4+Yx^2+Z = 0$\\
-le polynôme est d'ordre 8 c'est donc un ordre pair donc il admet au maximum deux racines.\\
-Or le coefficient de l'ordre 8 est impair et z est négatif donc le polynôme admet deux racines de signes contraires.\\
-on peut donc factoriser le polynôme par un polynôme d'ordre 6 et par un polynôme d'ordre 2\\
+\subsection*{Premier Cas}
+$\frac{x}{1+x^2}=0 \longrightarrow x=0$\\
+On a alors :\\
+$frac{\delta f_2}{\delta x_1}=\frac{-1}{2}\frac{\delta \frac{x}{1+x^2}}{\delta x}(x^2 - \frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2)=-2\frac{1+x^2-4x^2}{2(1+x^2)^2}$
+Ce qui équivaut, avec l'hypothèse précédente $x=0$, à :\\
+\[frac{\delta f_2}{\delta x_1}=-1\]
+
+La matrice jacobienne du système pour le point d'équilibre $x=0$ devient donc :\\
+\[
+J=
+\begin{pmatrix}
+0&1\\
+-1&0
+\end{pmatrix}
+\]
+On peut alors en calculer les caractéristique :\\
+$tr(J_f) = 0 $\\
+$det(J_f) =  1 $\\
+$\Delta(J_f) = -4$\\
+Ce sont les caractéristiques d'un point d'équilibre centré.\\
+
+\subsection*{Second Cas}
+Dans ce cas, $x^2-\frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2=0$\\
+On a alors :\\
+$\frac{\delta f_2}{\delta x}=-\frac{x}{2(1+x^2)}(2x-\frac{2x\times l_0\sqrt{1+\frac{x^4}{4}}-x^2\times l_0\frac{x^3}{2\sqrt{1+\frac{x^4}{4}}}}{1+\frac{x^4}{4}})=
+-\frac{x}{2(1+x^2)}(2-\frac{2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+l_0\frac{x^4}{2\sqrt{1+\frac{x^4}{4}^{3/2}}})$\\
+D'après l'équation:\\
+$\ddot{x}=0$\\
+On a :\\
+$\sqrt{1+\frac{x^4}{4}}=\frac{x^2\times l_0}{2+x^2}$\\
+On peut alors simplifier l'équation de la dérivée partielle de $f_2$, pour obtenir :\\
+$\frac{\delta f_2}{\delta x}=-\frac{x}{2(1+x^2)}(2-\frac{2(2+x^2}{x^2}+\frac{x^2}{2}\frac{2+x^2}{1+\frac{x^4}{4}})$
+
+Pour étudier le signe de $\frac{\delta f_2}{\delta x}$, on la compare à 0 :
+$2x^2-2(2+x^2)+\frac{x^4}{4}\frac{2+x^2}{1+\frac{x^4}{4}}=0$\\
+$2x^2-\frac{x^6}{2}-(4+2x^2)(1+\frac{x^4}{4})+x^4+\frac{x^6}{2}=0$\\
+$2x^2+x^6-4-x^4-2x^2-\frac{x^6}{2}+x^4=0$\\
+$\frac{x^6}{2}-4=0$\\
+$x^6=8$\\
+On peut alors déterminer le signe de $\frac{\delta f_2}{\delta x}$ qui est directement lié à celui de $x^6-8$, afin de trouver le signe de :\\
+$tr(J_f) = 0 $\\
+$det(J_f) =  -C\times(x^6-8) $\\
+$\Delta(J_f) = 4C\times(x^6-8)$\\
+Avec C une fonction strictement positive.
+
+Les relations qui lient le signe de $\frac{\delta f_2}{\delta x_1}$ à celui de $x^6-8$ sont les suivantes :\\
+$\frac{\delta f_2}{\delta x_1}<0$ si $x^6<8$\\
+$\frac{\delta f_2}{\delta x_1}=0$ si $x^6=8$\\
+$\frac{\delta f_2}{\delta x_1}>0$ si $x^6>8$\\
+
+%Il faut alors déterminer $\frac{\delta f_2}{dx_1}$ : \\
+%\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
+%Détail du calcul de  $\frac{\delta f_2}{dx_1}$ :\\
+%(VIDE !!! voir lune à plume, je vois de quoi je parle. Pour info, c'est du calcul brut, pas "d'astuce")\\
+%
+%On peut alors calculer les propriétés de la matrice (respectivement Déterminant, Trace, Discriminant du polynôme caractéristique) :\\
+%\[ det(J_f) =  \frac{\delta f_2}{dx_1} \]
+%\[ tr(J_f) = 0 \]
+%\[ \Delta(J_f) = tr(J_f)^2 - 4\times det(J_f) = 4\frac{\delta f_2}{dx_1}\]
+%Pour connaitre la nature du point d'équilibre, il nous reste plus qu'à étudier le signe de $\frac{\delta f_2}{dx_1}$ :\\
+%\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
+%D'après la question précédente, on a en tout point d'équilibre $\sqrt{1+\frac{x^4}{4}}=\frac{x^2l_0}{x^2+2}$, d'où : \\
+%\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - \frac{1}{2}(x^2+2)^2(1+x^2)\frac{l_0x^6}{\frac{(x^2l_0)^2}{(x^2+2)}}}{2(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
+%\[ =\frac{-\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4}{2(1+x^2)^2} \]
+%
+%(Jusqu'à là, je suis sur que c'était la bonne méthode. Le remplacement de $\sqrt{1+\frac{x^4}{4}}=\frac{x^2l_0}{x^2+2}$ est lui-aussi bon) \\
+%
+%Le dénominateur étant positif pour tout x, on cherche le signe du numérateur, c-à-d de :\\
+%\[ -\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4 \]
+%
+%%Thibault:
+%Étude de signe du polynôme:\\
+%on pose, \[ -\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4  = 0\]
+%
+%Le polynôme est factorisable par $x^2$ et on obtient un polynôme d'ordre 8\\
+%$-1x^8/l_0-7x^6/l_0-18x^4/l_0+x^2(n 6l_0-1-20/l_0)+(8l_0-1-8l_0) = 0$\\
+%On pose :\\ $V = -1/l_0$\\   $Y = (6l_0-1-20/l_0)$\\   $Z = (8l_0-1-8/l_0)$\\
+%on a: $Vx^8+7Vx^6+18Vx^4+Yx^2+Z = 0$\\
+%le polynôme est d'ordre 8 c'est donc un ordre pair donc il admet au maximum deux racines.\\
+%Or le coefficient de l'ordre 8 est impair et z est négatif donc le polynôme admet deux racines de signes contraires.\\
+%on peut donc factoriser le polynôme par un polynôme d'ordre 6 et par un polynôme d'ordre 2\\
 
 
 
