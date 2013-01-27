@@ -510,13 +510,26 @@ Sur matlabinit.pdf le prof sort une formule magique pour calculer la période. J
 \subsection{Représenter le diagramme de Matlab le diagramme de bifurcation  en $(a,\gamma)$ pour chacun des points d'équilibres.}
 L'équation différentielle s'écrit désormais:\\
 \[  \ddot{x} + \gamma.\dot{x} + \frac{\dot{x}^2x}{1+x^2} + \frac{1}{2}\frac{x^3}{1+x^2} + \frac{x}{1+x^2} - \frac{a.x^3}{2(1+x^2)\sqrt{x^4/4+1}}=0 \]	
-On détermine les points d'équilibres:
+%On détermine les points d'équilibres: Les points d'équilibres sont les memes car \ddot{x}=\dot{x}=0
+On a toujours:\\
+$x_0=0$\\
+$x_1=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
+$x_2=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
+$x_3=\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
+$x_4=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
+
+Il faut calculer pour chaque points d'équilibres:\\
+D= Calcul du discriminant du polynome caractéristique\\
+S= Somme des 2 valeurs propres\\
+P= Produit des 2 valeurs propres
+
 
 \subsection{On suppose que $a=\sqrt{15}$. Pour quelles valeurs (exactes) de $\gamma$ les points d'équilibres attractifs changent-ils de nature.}
 
 \subsection{Représenter le portrait de phase pour $\gamma=1, \gamma=2, \gamma=3.$}
 On calcul l'intégrale première du système afin de pouvoir déterminer le diagramme de phase. On a:
 \[\fbox{$ \frac{1}{2}v^2 + \gamma.v + \frac{1}{8}x^4 + \frac{x^2}{2} - a\sqrt{\frac{x^4}{4} + 1} = C  $}\]
+%Il y a plus qu'a tester sur matlab.
 %gamma=1
 %gamma=2 
 %gamma=3
