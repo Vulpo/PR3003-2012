@@ -391,7 +391,8 @@ $det(J_f) < 0 $\\
 $\Delta(J_f) > 0$\\
 Il s'agit d'un point selle.
 \end{itemize}
-LA CE SERAIT SYMPA DE FAIRE UN SCHEMA AVEC EN GROS LES Xn PLACÉS A PEU PRES.
+On représente les $x_n$ sur le portrait de phase.
+%LA CE SERAIT SYMPA DE FAIRE UN SCHEMA AVEC EN GROS LES Xn PLACÉS A PEU PRES.
 
 
 %D'après l'équation:\\
@@ -494,18 +495,29 @@ En intégrant l'équation, on obtient:\\
 \subsection{Représenter le portrait de phase.}
 A partir de l'intégrale première, on détermine le portrait de phase pour $a=\sqrt{15}$.
 \begin{figure}[H]
-	\includegraphics[scale=0.5]{PortraitDePhase1.png}
+	\includegraphics[scale=0.5]{PortraitDePhasePointsVisibles.png}
 	\caption{Portrait de phase. $a=\sqrt{15}$}
 \end{figure} 
 
 \subsection{Que peut-on en déduire sur le mouvement.}
 On remarque trois points d'équilibres en (0,0), (2.288,0) et (-2.288,0). En ces points le mouvement tend à s'arrêter. On remarque aussi deux points selles en (-0.874,0) et (0.874,0). En ces points le système est instable et le mouvement tend à s'accélérer.%Il faudra pe modifier mon analyse.
+
 \section{On suppose maintenant que $a=\sqrt{3}$ et $x(0)=x_0>0$ et $\dot{x}(0)=0$.}
 \subsection{Calculer et représenter à l'aide de Matlab la période T en fonction de $x_0$ pour $0<x_0<10$.}
+Sur matlabinit.pdf le prof sort une formule magique pour calculer la période. Je vois pas comment faire.
 
 \section{On suppose maintenant que le système est soumis à une force de frottement $\gamma > 0$ et que l'équation devient: (E) $\ddot{x} + \gamma.\dot{x} + f(x,a) = 0$.}
 \subsection{Représenter le diagramme de Matlab le diagramme de bifurcation  en $(a,\gamma)$ pour chacun des points d'équilibres.}
-\subsection{On suppose que $a=\sqrt{15}$. Pour quelles valeurs (exactes) de $\gamma$ les points d'équilibres attractifs changent-ils de nature.}
-\subsection{Représenter le portrait de phase pour $\gamma=1, \gamma=2, \gamma=3.$}
+L'équation différentielle s'écrit désormais:\\
+\[  \ddot{x} + \gamma.\dot{x} + \frac{\dot{x}^2x}{1+x^2} + \frac{1}{2}\frac{x^3}{1+x^2} + \frac{x}{1+x^2} - \frac{a.x^3}{2(1+x^2)\sqrt{x^4/4+1}}=0 \]	
+On détermine les points d'équilibres:
 
+\subsection{On suppose que $a=\sqrt{15}$. Pour quelles valeurs (exactes) de $\gamma$ les points d'équilibres attractifs changent-ils de nature.}
+
+\subsection{Représenter le portrait de phase pour $\gamma=1, \gamma=2, \gamma=3.$}
+On calcul l'intégrale première du système afin de pouvoir déterminer le diagramme de phase. On a:
+\[\fbox{$ \frac{1}{2}v^2 + \gamma.v + \frac{1}{8}x^4 + \frac{x^2}{2} - a\sqrt{\frac{x^4}{4} + 1} = C  $}\]
+%gamma=1
+%gamma=2 
+%gamma=3
 \end{document}
