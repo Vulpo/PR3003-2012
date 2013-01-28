@@ -504,7 +504,14 @@ On remarque trois points d'équilibres en (0,0), (2.288,0) et (-2.288,0). En ces
 
 \section{On suppose maintenant que $a=\sqrt{3}$ et $x(0)=x_0>0$ et $\dot{x}(0)=0$.}
 \subsection{Calculer et représenter à l'aide de Matlab la période T en fonction de $x_0$ pour $0<x_0<10$.}
-Sur matlabinit.pdf le prof sort une formule magique pour calculer la période. Je vois pas comment faire.
+L'intégrale première du système peut s'écrire sous la forme: $ \frac{v^2}{2} + G(x) = 0 $ avec $ G(x)=\frac{1}{8}x^4 + \frac{x^2}{2} - a\sqrt{\frac{x^4}{4} + 1}  $\\
+C correspond à la valeur initiale: $C=G(x_0)$ pour $x_0>0$\\
+On a alors $\dot{x} = \sqrt{\frac{2(G(x_0) - G(x))}{1 + x^2}}$\\
+
+
+
+
+$T=2\int_{t(x_{min})}^{t(x_{min})} dt $
 
 \section{On suppose maintenant que le système est soumis à une force de frottement $\gamma > 0$ et que l'équation devient: (E) $\ddot{x} + \gamma.\dot{x} + f(x,a) = 0$.}
 \subsection{Représenter le diagramme de Matlab le diagramme de bifurcation  en $(a,\gamma)$ pour chacun des points d'équilibres.}
