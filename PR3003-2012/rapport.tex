@@ -11,7 +11,6 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{hyperref} % lien hypertext
 \usepackage{tikz,tkz-tab} %tableau de variations
-\reversemarginpar  %notes à gauche au lieu d'à droite
 %\hypersetup{pdfborder={0 0 0}}
 
 \begin{document}
@@ -513,7 +512,7 @@ Puisque $ \frac{1}{2}\dot{x}^2(1 + x^2) + G(x) = G(x_0) $. On a alors $\dot{x} =
 Connaissant $\frac{\delta x}{\delta t}$, on peut simplifier le calcul de l'intégrale pour la période T:\\
 $T=2\int_{x_{min}}^{x_{max}} \frac{\sqrt{1 + x^2}}{\sqrt{2(G(x_0) - G(x))}} dx $\\
 On intègre de 0 à $x_0$. On a alors:
-\[T=2\int_{0}^{x_0}} \frac{\sqrt{1 + x^2}}{\sqrt{2(G(x_0) - G(x))}} dx \]\\
+\[T=2\int_{0}^{x_0} \frac{\sqrt{1 + x^2}}{\sqrt{2(G(x_0) - G(x))}} dx \]
 
 
 \section{On suppose maintenant que le système est soumis à une force de frottement $\gamma > 0$ et que l'équation devient: (E) $\ddot{x} + \gamma.\dot{x} + f(x,a) = 0$.}
@@ -531,7 +530,34 @@ $x_4=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
 Il faut calculer pour chaque points d'équilibres:\\
 D= Calcul du discriminant du polynome caractéristique\\
 S= Somme des 2 valeurs propres\\
-P= Produit des 2 valeurs propres
+P= Produit des 2 valeurs propres \\
+
+Pour cela, on étudie la matrice du système linéaire associée.
+
+\[
+J=
+\begin{pmatrix}
+\frac{\delta f_1}{\delta x_1} & \frac{\delta f_1}{\delta x_2}\\
+\frac{\delta f_2}{\delta x_1} & \frac{\delta f_2}{\delta x_2} \\
+\end{pmatrix}
+\]
+
+On a toujours \[\dot{x_1}=x_2=f_1(x_1*,x_2*)\]
+D'où $\frac{\delta f_1}{\delta x_1}=0$ et $\frac{\delta f_1}{\delta x_2}=1$\\
+Le terme supplémentaire n'a pas une dérivée nulle par rapport à $x_2$: $\frac{\delta \gamma x_2}{\delta x_2}=\gamma$\\.
+Nous obtennons ainsi la nouvelle matrice Jacobienne associée au système avec forces de frottements :
+\[
+J=
+\begin{pmatrix}
+0 & 1\\
+\frac{\delta f_2}{\delta x_1} & \gamma\\
+\end{pmatrix}
+\]
+\\
+$tr(J) = \gamma $\\
+$det(J) = -\frac{\delta f_2}{\delta x_1} $\\
+$\Delta(J) = tr^2(J)-4det(J)=\delta^2 + 4\frac{\delta f_2}{\delta x_1}$\\
+
 
 
 \subsection{On suppose que $a=\sqrt{15}$. Pour quelles valeurs (exactes) de $\gamma$ les points d'équilibres attractifs changent-ils de nature.}
