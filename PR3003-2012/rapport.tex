@@ -506,14 +506,19 @@ On remarque trois points d'équilibres en (0,0), (2.288,0) et (-2.288,0). En ces
 On peut déterminer la période T des oscillations en calculant cette intégrale:\\
 $T=2\int_{t(x_{min})}^{t(x_{max})} dt $\\
 \\
-L'intégrale première du système peut s'écrire sous la forme: $ \frac{v^2}{2} + G(x) = 0 $ avec $ G(x)=\frac{1}{8}x^4 + \frac{x^2}{2} - a\sqrt{\frac{x^4}{4} + 1}  $\\
+L'intégrale première du système peut s'écrire sous la forme: $ \frac{v^2}{2} + G(x) = 0 $ avec \fbox{$G(x)=\frac{1}{8}x^4 + \frac{x^2}{2} - a\sqrt{\frac{x^4}{4} + 1} $} \\
 C correspond à la valeur initiale: $C=G(x_0)$ pour $x_0>0$\\
 Puisque $ \frac{1}{2}\dot{x}^2(1 + x^2) + G(x) = G(x_0) $. On a alors $\dot{x} = \sqrt{\frac{2(G(x_0) - G(x))}{1 + x^2}}$\\
 Connaissant $\frac{\delta x}{\delta t}$, on peut simplifier le calcul de l'intégrale pour la période T:\\
 $T=2\int_{x_{min}}^{x_{max}} \frac{\sqrt{1 + x^2}}{\sqrt{2(G(x_0) - G(x))}} dx $\\
 On intègre de 0 à $x_0$. On a alors:
-\[T=2\int_{0}^{x_0} \frac{\sqrt{1 + x^2}}{\sqrt{2(G(x_0) - G(x))}} dx \]
+\[\fbox{$ T=2\int_{0}^{x_0} \frac{\sqrt{1 + x^2}}{\sqrt{2(G(x_0) - G(x))}} dx $}\]
+Matlab peut réaliser l'intégration. On lui demande d'intégrer sur plusieurs valeurs de $x_0$, afin de pouvoir tracer la courbe de la période en fonction de $x_0$.
 
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{PeriodePendule.png}
+	\caption{Période T du système oscillatoire en fonction de $x_0$}
+\end{figure} 
 
 \section{On suppose maintenant que le système est soumis à une force de frottement $\gamma > 0$ et que l'équation devient: (E) $\ddot{x} + \gamma.\dot{x} + f(x,a) = 0$.}
 \subsection{Représenter le diagramme de Matlab le diagramme de bifurcation  en $(a,\gamma)$ pour chacun des points d'équilibres.}
@@ -545,7 +550,7 @@ J=
 On a toujours \[\dot{x_1}=x_2=f_1(x_1*,x_2*)\]
 D'où $\frac{\delta f_1}{\delta x_1}=0$ et $\frac{\delta f_1}{\delta x_2}=1$\\
 Le terme supplémentaire n'a pas une dérivée nulle par rapport à $x_2$: $\frac{\delta \gamma x_2}{\delta x_2}=\gamma$\\.
-Nous obtennons ainsi la nouvelle matrice Jacobienne associée au système avec forces de frottements :
+Nous obtenons ainsi la nouvelle matrice Jacobienne associée au système avec forces de frottements :
 \[
 J=
 \begin{pmatrix}
