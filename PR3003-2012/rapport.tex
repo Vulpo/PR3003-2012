@@ -309,7 +309,7 @@ Ici, nous avons deux éventualités pour satisfaire cette équation :\\
 \item cas 2 : $x^2-\frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2=0$\\
 \end{itemize}
 
-\subsection*{Premier Cas}
+\subsubsection*{Premier Cas}
 $\frac{x}{1+x^2}=0 \longrightarrow x=0$\\
 On a alors :\\
 $frac{\delta f_2}{\delta x_1}=\frac{-1}{2}\frac{\delta \frac{x}{1+x^2}}{\delta x}(x^2 - \frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2)=-2\frac{1+x^2-4x^2}{2(1+x^2)^2}$
@@ -330,7 +330,7 @@ $det(J_f) =  1 $\\
 $\Delta(J_f) = -4$\\
 Ce sont les caractéristiques d'un point d'équilibre centré.\\
 
-\subsection*{Second Cas}
+\subsubsection*{Second Cas}
 Dans ce cas, $x^2-\frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2=0$\\
 On a alors :\\
 $\frac{\delta f_2}{\delta x}=-\frac{x}{2(1+x^2)}(2x-\frac{2x\times l_0\sqrt{1+\frac{x^4}{4}}-x^2\times l_0\frac{x^3}{2\sqrt{1+\frac{x^4}{4}}}}{1+\frac{x^4}{4}})=
@@ -349,7 +349,7 @@ D'où le tableau de variations suivant :\\
 \end{tikzpicture}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-x=0
+$x=0$\\
 $x_1=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
 $x_2=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
 $x_3=\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
@@ -365,16 +365,36 @@ avec :\\
 $\sqrt{(-1+\sqrt{1+l_0^2})^2-4}>0$\\
 Ce qui nous permet enfin de calculer la nature des points d'équilibre :
 \begin{itemize}
-\item $x_2=0$\\
+\item $x_0=0$\\
 D'après le tableau de variation, $\frac{\delta f_2}{\delta x}$<0.\\
 $tr(J_f) = 0 $\\
 $det(J_f) > 0 $\\
 $\Delta(J_f) < 0$\\
 Il s'agit d'un point centre.
 \item $x_1=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
-RESTE A DEMONTRER QUE C'EST UN POINT CENTRE.
+Correspondant à : $y_3=\frac{1}{2}(-1+\sqrt{1+l_0^2})-\frac{1}{2}\sqrt{(-1+\sqrt{1+l_0^2})^2-4}$\\
+On pose :\\
+$A=-1+\sqrt{1+l_0^2}$\\
+$B=\sqrt{(-1+\sqrt{1+l_0^2})^2-4} = \sqrt{A^2-4}$\\
+$y=\frac{1}{2}(A-B)$\\
+D'après le théorème des trois maisons, on a :\\
+$B > \sqrt{A^2} - \sqrt{4}$\\
+$B > A - 2$\\
+$A-B < 2$\\
+$\frac{1}{2}(A-B)<1$\\
+$y_3 < 1$\\
+$\frac{x_1^2}{2}<1$\\
+$x_1^2<2$\\
+D'où :
+$x_1<\sqrt{2}$ et $x_1>-\sqrt{2}$\\
+D'après le tableau de variations, $\frac{\delta f_2}{\delta x_1}<0$. Ainsi :\\
+$tr(J_f) = 0 $\\
+$det(J_f) > 0 $\\
+$\Delta(J_f) < 0$\\
+Il s'agit d'un point centre.
 \item $x_2=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
-RESTE A DEMONTRER QUE C'EST UN POINT CENTRE.
+Il s'agit de l'opposé de $x_1$, on est donc aussi dans le cas de $\frac{\delta f_2}{\delta x_1}<0$.\\
+$x_2$ est donc, comme $x_1$, un point centre.
 \item $x_3=\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}>\sqrt{2}$\\
 Car racine carrée d'une somme de expressions supérieures à zéro, dont l'une supérieur à 2.
 D'après le tableau de variation, $\frac{\delta f_2}{\delta x}>0$. Ainsi :\\
@@ -383,12 +403,9 @@ $det(J_f) < 0 $\\
 $\Delta(J_f) > 0$\\
 Il s'agit d'un point selle.
 \item $x_4=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}<-\sqrt{2}$\\
-Car racine carrée d'une somme de expressions supérieures à zéro, dont l'une supérieur à 2.
-D'après le tableau de variation, $\frac{\delta f_2}{\delta x}>0$. Ainsi :\\
-$tr(J_f) = 0 $\\
-$det(J_f) < 0 $\\
-$\Delta(J_f) > 0$\\
-Il s'agit d'un point selle.
+Puisqu'il s'agit de l'opposé de $x_3$.
+D'après le tableau de variation, $\frac{\delta f_2}{\delta x}>0$.\\
+$x_4$ est donc, comme $x_3$, un point selle.\\
 \end{itemize}
 On représente les $x_n$ sur le portrait de phase.
 %LA CE SERAIT SYMPA DE FAIRE UN SCHEMA AVEC EN GROS LES Xn PLACÉS A PEU PRES.
