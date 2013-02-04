@@ -312,9 +312,9 @@ $x_1 = -\frac{\sqrt{8}}{-2} = -\sqrt{2}$\\
 $x_2 = \frac{\sqrt{8}}{-2} = \sqrt{2}$\\
 D'où le tableau de variations suivant :\\
 \begin{tikzpicture}
-\tkzTab{$x$/1,$\frac{\delta f_2}{\delta x_1}$/1,ENLEVER CETTE LIGNE/1.8}{$-\infty$,$+\infty$}{+,-,+}{-/$-\infty$, +/$+\infty$}
-\tkzTabVal[draw]{1}{2}{0.4}{$-\sqrt{2}$}{$0$}
-\tkzTabVal[draw]{1}{2}{0.6}{$\sqrt{2}$}{$0$}\\
+\tkzTab{$x$/1,$\frac{\delta f_2}{\delta x_1}$/1,$f_2$/1.8}{$-\infty$,$+\infty$}{+,-,+}{-/$-\infty$, +/$+\infty$}
+\tkzTabVal[draw]{1}{2}{0.3}{$-\sqrt{2}$}{$0$}
+\tkzTabVal[draw]{1}{2}{0.7}{$\sqrt{2}$}{$0$}\\
 \end{tikzpicture}\\
 Les points d'équilibre sont les suivants :\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -541,7 +541,7 @@ J=
 \\
 $tr(J) = \gamma $\\
 $det(J) = -\frac{\delta f_2}{\delta x_1} $\\
-$\Delta(J) = tr^2(J)-4det(J)=\delta^2 + 4\frac{\delta f_2}{\delta x_1}$\\
+$\Delta(J) = tr^2(J)-4det(J)=\gamma^2 + 4\frac{\delta f_2}{\delta x_1}$\\ 
 
 
 
@@ -550,9 +550,10 @@ $\Delta(J) = tr^2(J)-4det(J)=\delta^2 + 4\frac{\delta f_2}{\delta x_1}$\\
 \subsection{Représenter le portrait de phase pour $\gamma=1, \gamma=2, \gamma=3.$}
 On calcul l'intégrale première du système afin de pouvoir déterminer le diagramme de phase. On a:
 \[\fbox{$ \frac{1}{2}v^2 + \gamma.v + \frac{1}{8}x^4 + \frac{x^2}{2} - a\sqrt{\frac{x^4}{4} + 1} = C  $}\]
-IL FAUT UTILISER LA METHODE 2 (local)
+Il faut utiliser la deuxième méthode (local)
 %Il y a plus qu'a tester sur matlab.
 %gamma=1
 %gamma=2 
 %gamma=3
+
 \end{document}
