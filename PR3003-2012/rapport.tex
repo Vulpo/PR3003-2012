@@ -312,10 +312,15 @@ $x_1 = -\frac{\sqrt{8}}{-2} = -\sqrt{2}$\\
 $x_2 = \frac{\sqrt{8}}{-2} = \sqrt{2}$\\
 D'où le tableau de variations suivant :\\
 \begin{tikzpicture}
-\tkzTab{$x$/1,$\frac{\delta f_2}{\delta x_1}$/1,$f_2$/1.8}{$-\infty$,$+\infty$}{+,-,+}{-/$-\infty$, +/$+\infty$}
-\tkzTabVal[draw]{1}{2}{0.3}{$-\sqrt{2}$}{$0$}
-\tkzTabVal[draw]{1}{2}{0.7}{$\sqrt{2}$}{$0$}\\
+%\tkzTab{$x$/1,$\frac{\delta f_2}{\delta x_1}$/1,$f_2$/1.8}{$-\infty$,$+\infty$}{+,-,+}{-/$-\infty$, +/$+\infty$}
+%\tkzTabVal[draw]{1}{2}{0.3}{$-\sqrt{2}$}{$0$}
+%\tkzTabVal[draw]{1}{2}{0.7}{$\sqrt{2}$}{$0$}\\
+\tkzTab{$x$/1,$\frac{\delta f_2}{\delta x_1}$/1}{$-\infty$,$+\infty$}{+,-,+}{,}
+\tkzTabVal[]{1}{2}{0.3}{$-\sqrt{2}$}{}
+\tkzTabVal[]{1}{2}{0.7}{$\sqrt{2}$}{}\\
 \end{tikzpicture}\\
+\\
+Avec $\frac{\delta f_2}{\delta x_1}=0$ pour $x=\pm \sqrt{2}$.
 Les points d'équilibre sont les suivants :\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 $x=0$\\
@@ -546,6 +551,21 @@ $\Delta(J) = tr^2(J)-4det(J)=\gamma^2 + 4\frac{\delta f_2}{\delta x_1}$\\
 
 
 \subsection{On suppose que $a=\sqrt{15}$. Pour quelles valeurs (exactes) de $\gamma$ les points d'équilibres attractifs changent-ils de nature.}
+
+Comme nous venons de le voir, en ajoutant une force de frottement, un facteur $\gamma$ est ajouté à l'équation, la trace et le discriminant sont modifiés. 
+De plus, pour les points attractifs $frac{\delta f_2}{\delta x_1}$ < 0.
+Nous nous intéressons donc aux trois points centres que nous avons trouvé dans les questions précédentes:
+$x=0$\\
+$x_1=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
+$x_2=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
+
+On étudie les signes de la trace et de Delta.
+On détermine les racines de delta.
+On pose:
+$0 = gamma^2 + 4\frac{\delta f_2}{\delta x_1}$
+
+$\Delta=-16.\frac{\delta f_2}{\delta x_1}$ 
+
 
 \subsection{Représenter le portrait de phase pour $\gamma=1, \gamma=2, \gamma=3.$}
 On calcul l'intégrale première du système afin de pouvoir déterminer le diagramme de phase. On a:
