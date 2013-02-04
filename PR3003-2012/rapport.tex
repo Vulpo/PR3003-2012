@@ -45,23 +45,19 @@ Renard Charles\\
 
 \end{center}
 
-
-
-
-\newpage
--
 \newpage
 \tableofcontents              % Table des matieres
 \clearpage
 
 
 \section{Déterminer l'équation différentielle vérifiée par M(t)=(x(t),y(t)).}
+\subsection{Application de la seconde loi de Newton}
 \begin{figure}[H]
 	\includegraphics[scale=0.7]{GraphMath2.png}
 	%\caption{Histoire de Sanofi}
 \end{figure}
 La masselotte M se déplace uniquement selon la composante tangentielle. Pour déterminer l'équation différentielle on va donc particulièrement s'intéresser à l'équation sur la composante tangentielle.\\
-Pour cela, on commence à faire la somme des forces s'exerçant sur la composante tangentielle $\vec{u_t}$ et normale $\vec{u_n}$ selon la seconde loi de Newton (PFD) :
+Pour cela, étudie la somme des forces s'exerçant sur la composante tangentielle $\vec{u_t}$ et normale $\vec{u_n}$. Selon la seconde loi de Newton (PFD) :
 \[
    \left \{
    \begin{array}{r c l}
@@ -72,56 +68,38 @@ Pour cela, on commence à faire la somme des forces s'exerçant sur la composant
 \]
 On s'intéresse à l'équation: \[\fbox{$P_t+T_t=ma_t$}\] \\ 
 Pour déterminer l'équation différentielle, on doit alors projeter $\vec{T}$ et  $\vec{mg}$ sur $\vec{u_t}$. \\
-On projette $\vec{mg}=-mg.\vec{u_y}$ sur $\vec{u_t}$\\
 
 \subsection{Projection du Poids sur la composante tangentielle}
+On projette $\vec{mg}=-mg.\vec{u_y}$ sur $\vec{u_t}$\\
 \begin{figure}[H]
 	\includegraphics[scale=0.7]{GraphMathZoomProjectionPoids.png}
 	%\caption{Histoire de Sanofi}
 \end{figure}
 
-On remarque sur le graphique que $P_t=P.\cos(\alpha)$\\
+On projette tel que $P_t=P.\cos(\alpha)$\\
 On cherche à déterminer $\alpha$.
 On calcule la pente a de la tige parabolique. $a=\frac{\partial y}{\partial x}=\frac{\partial x^2/2}{\partial x}=x$ \\
 En $M(x_0,y_0)$ la pente a de la tige parabolique vaut donc $x_0$.
-Cette pente a nous permet de calculer l'angle $\alpha$. En effet, on remarque graphiquement que $\tan(\alpha)=\frac{1}{a}$. On en déduit: $\alpha=\tan^{-1}(\frac{1}{x_0})$\\
-Au final on trouve donc: $P_t=P.\cos(\tan^{-1}(\frac{1}{x_0})) $\\
-Or $\cos(\tan^{-1}(x))=\frac{1}{\sqrt{1+x^2}}$  On en déduit donc: $P_t=P.\frac{1}{\sqrt{1+1/x^2_0}}$ D'où: 
+Cette pente permet de calculer l'angle $\alpha$. En effet, on remarque graphiquement que $\tan(\alpha)=\frac{1}{a}$.\\
+On en déduit: $\alpha=\tan^{-1}(\frac{1}{x_0})$\\
+$P_t=P.\cos(\tan^{-1}(\frac{1}{x_0})) $\\
+Or $\cos(\tan^{-1}(x))=\frac{1}{\sqrt{1+x^2}}$\\
+On en déduit donc: $P_t=P.\frac{1}{\sqrt{1+1/x^2_0}}$\\
+D'où: 
 \[\fbox{$P_t=P.\frac{x_0}{\sqrt{1+x^2_0}}$}\]
 
 \subsection{Projection de la tension du ressort su la composante tangentielle}
 On projette désormais $\vec{T}$ sur $\vec{u_t}$.\\
-\subsubsection{Methode de Guillaume, diff d'angle}
-\begin{figure}[H]
-	\includegraphics[scale=0.35]{GraphMathZoomProjectionT2.png}
-	%\caption{Histoire de Sanofi}
-\end{figure} 
-$\cos(\phi)=\frac{x}{\sqrt{x^2+y^2}}=\frac{1}{\sqrt{1+x^2}}$ \\
 
-$\cos(\theta)=\frac{x}{\sqrt{(1-y)^2+x^2}}=\frac{x}{\sqrt{1+x^4/4}}$ \\
-Et: 
-$T_t=T.\cos(\alpha 2)=T.\cos(\phi - \theta)=T[\cos(\phi).\cos(\theta)+\sin(\phi).\sin(\theta)]$\\
-On en déduit:\\
-$T_t=T[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sin(\cos^{-1}(\frac{1}{\sqrt{1+x^2}})).\sin(\cos^{-1}(\frac{x}{\sqrt{1+x^4/4}}))]$\\
-Or: $\sin(\cos^{-1}(u))=\sqrt{1-u^2}$\\
-On trouve donc:\[\fbox{$T_t=T.[\frac{1}{\sqrt{1+x^2}}.\frac{x}{\sqrt{1+x^4/4}} + \sqrt{1-\frac{1}{1+x^2}}.\sqrt{1-\frac{x^2}{1+x^4/4}}]$}\]\\
-
-%La pente de la tangente vaut $x_0$. Celle de $\vec{PM}$ vaut $\frac{y_0-1}{x_0}$.\\
-%On en déduit ainsi: $\tan(\phi)=x_0$ et $\tan(\theta)=\frac{y_0-1}{x_0}$
-%On obtient ainsi $\alpha=\tan^{-1}(x_0) - \tan^{-1}(\frac{y_0-1}{x_0})$ et on en déduit: $T_t=T.\cos(\tan^{-1}(x_0) - \tan^{-1}(\frac{y_0-1}{x_0}))$ \\
-
-\subsubsection{Methode de Charles, Al-Kashi}
 \begin{figure}[H]
 	\includegraphics[scale=0.5]{al-kashi.png}
 	%\caption{Histoire de Sanofi}
 \end{figure}
-On note x,y les coordonnées du point M.\\
+On note x,y les coordonnées du point M. D'après le théorème de Pythagore :\\
 $a=\sqrt{(x_M-x_P)^2+(y_M-y_P)^2}=\sqrt{x^2+(\frac{x^2}{2}-1)}=\sqrt{x^2+\frac{x^4}{4}-x^2+1}=\sqrt{\frac{x^4}{4}+1}$\\
-$b=\sqrt{(x_M-x_P)^2+(y_M-\Delta(0))^2}=\sqrt{x^2+(\frac{x^2}{2}+\frac{x^2}{2})^2}=\sqrt{x^2+x^4}=x\sqrt{1+x^2}$\\
-note : faut-il mettre plutôt $|x|\sqrt{1+x^2}$ ?\\
+$b=\sqrt{(x_M-x_P)^2+(y_M-\Delta(0))^2}=\sqrt{x^2+(\frac{x^2}{2}+\frac{x^2}{2})^2}=\sqrt{x^2+x^4}=|x|\sqrt{1+x^2}$\\
 $c=\sqrt{(y_p-\Delta(0))^2}=\sqrt{(1+\frac{x^2}{2})^2}=1+\frac{x^2}{2}$\\
-D'après le théorème d'Al-Kashi : 
-$x_1 = \frac{5 + \sqrt{25 - 4 \times 6}}{2} = 3$\\
+D'après le théorème d'Al-Kashi : \\
 $c^2 = a^2 + b^2 - 2ab\times\cos(\beta)$\\
 $\cos(\beta)=\frac{a^2+b^2-c^2}{2ab}=\frac{x^4/4+1+x^2+x^4-1-x^2-x^4/4}{2x\sqrt{x^4/4+1}\sqrt{1+x^2}}=\frac{x^3}{2\sqrt{\frac{x^4}{4}+1}\sqrt{1+x^2}}$\\
 On trouve donc :
@@ -140,7 +118,7 @@ Or $||\vec{a}||=\frac{\partial v}{\partial t}=\frac{\partial \pm\sqrt{\dot{x}^2+
 $ \dot{y}=\frac{\partial y}{\partial t}=\frac{\partial y}{\partial x}\times\frac{\partial x}{\partial t}=x\dot{x} $\\
 $ v=\sqrt{\dot{x}^2+\dot{x}^2x^2}=\dot{x}\sqrt{1+x^2} $\\
 $ \frac{\partial v}{\partial t}=\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}} $\\
-On trouve: \[\fbox{$a_t=\ddot{x}.\sqrt{1+x^2}+ \frac{\dot{x}^2.x}{\sqrt{1+x^2}}$}\] (Equation de Charles)
+On trouve: \[\fbox{$a_t=\ddot{x}.\sqrt{1+x^2}+ \frac{\dot{x}^2.x}{\sqrt{1+x^2}}$}\]
 %On obtient alors: $a_t=\sqrt{\ddot{x}^2+\ddot{y}^2}$
 
 \subsection{Détermination de l'équation différentielle}
@@ -175,27 +153,25 @@ On calcule maintenant l'équatio ndifférentielle du système en s'aidant des r�
 On part de l'équation $ P_t+T_t=ma_t $\\
 avec $T_t=k(l-l_0)$ et $P_t=-mg$\\
 En développant les expression on obtient :\\
-$k(\sqrt{x^4/4+1}-l_0)\times \frac{x^3}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}-mg\frac{x}{\sqrt{1+x^2}}=m(\ddot{x}\sqrt{1+x^2}+\frac{\ddot{x}^2x}{\sqrt{1+x^2}})$\\
-$ \frac{k}{m}(\frac{x^3}{2\sqrt{1+x^2}}-\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}})-\frac{xg}{\sqrt{1+x^2}}-\ddot{x}\sqrt{1+x^2}-\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+$-k(\sqrt{x^4/4+1}-l_0)\times \frac{x^3}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}-mg\frac{x}{\sqrt{1+x^2}}=m(\ddot{x}\sqrt{1+x^2}+\frac{\ddot{x}^2x}{\sqrt{1+x^2}})$\\
+$ -\frac{k}{m}(\frac{x^3}{2\sqrt{1+x^2}}-\frac{x^3\times l_0}{2\sqrt{x^4/4+1}\sqrt{1+x^2}})-\frac{xg}{\sqrt{1+x^2}}-\ddot{x}\sqrt{1+x^2}-\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
 En prenant k=m, g=1 et $a=l_0$ (données de l'énoncé), on obtient :\\
-$ -\frac{x^3}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\frac{x}{\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
-$ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
-$ (-\frac{x^3}{2}+x)\frac{1}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
-$ (-\frac{x^3}{2}+x)\frac{1}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}+\ddot{x}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
-\[ \fbox{$ \ddot{x}+\frac{\dot{x}^2x-x^3/2-x}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0 $}\]
+$ -\frac{x^3}{2\sqrt{1+x^2}}+\frac{x^3\times a}{2\sqrt{x^4/4+1}\sqrt{1+x^2}}-\frac{x}{\sqrt{1+x^2}}-\ddot{x}\sqrt{1+x^2}-\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0 $\\
+$\frac{x^3}{2\sqrt{1+x^2}}-\frac{a x^3}{2\sqrt{1+x^4/4}\sqrt{1+x^2}}+\frac{x}{\sqrt{1+x^2}}+\ddot{x}\sqrt{1+x^2}+\frac{\dot{x}^2x}{\sqrt{1+x^2}}=0$\\
+L'équation différentielle revient donc à :\\
+\[ \fbox{$ \ddot{x} + \frac{\dot{x}^2 x}{1+x^2} + \frac{x^3}{2(1+x^2)} - \frac{ax^3}{2\sqrt{1+x^4/4}(1+x^2)} + \frac{x}{1+x^2} = 0 $}\]
 
 \section{Dans toute la suite on supposera que g=1, k=m et on notera $a=l_0$ et on s'intéressera particulièrement par l'équation vérifié par x(t).}
 \subsection{Montrer que l'équation est de la forme: $\ddot{x} + f(x,\dot{x},a) = 0.$}
-On a bien $\ddot{x} + f(x,\dot{x},a) = 0.$ avec $f(x,\dot{x},a)=\frac{\dot{x}^2x+x^3/2+x}{1+x^2}-\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}$ 
+On retrouve la forme $\ddot{x} + f(x,\dot{x},a) = 0$, avec $f(x,\dot{x},a)=\frac{\dot{x}^2x+x^3/2+x}{1+x^2}-\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}$ 
 \subsection{Détermination des points d'équilibre}
 
 Les points d'équilibre sont les points où la vitesse du système et donc de la masselotte est nulle. Ainsi, les tèrmes lié à la vitesse et à l'accélération du système sont nuls.\\
 Les points d'équilibres correspondent aux solutions de l'équation :\\
 $ \ddot{x}+\frac{\dot{x}^2x-x^3/2-x}{1+x^2}+\frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0 $
 où 
-%$\ddot{x}=\frac{\dot{x}^2x-x^3/2-x}{1+x^2}=0$\\
-$\ddot{x}=0$ et $\dot{x}=0$
-Ainsi on a :\\
+$\ddot{x}=0$ et $\dot{x}=0$ aux points d'équilibre.\\
+Ce qui revient à l'équation :\\
 $\frac{-x^3/2-x}{1+x^2} + \frac{x^3\times a}{2\sqrt{x^4/4+1}(1+x^2)}=0$ \\
 Une première solution correspond à $x_0=0$ et $y_0=0$ \\
 En multipliant de part et d'autre de l'équation par $\frac{2(1+x^2)}{x}$ :\\
@@ -223,15 +199,8 @@ $y=\frac{1}{2}(X-\sqrt{X^2-4})$\\
 $y=\frac{1}{2}(X+\sqrt{X^2-4})$\\
 Cependant, il faut savoir que $\Delta_y$ doit être positif afin que les racines soient rélles.\\
 
-%ICI METTRE DEMO ELIMINATION DE LA SOLUTION X1
+\renewcommand{\labelitemi}{$\circ$}
 
-%$\Delta>0 \Rightarrow X^2>4$\\
-%Pour la solution $X=(-1-\sqrt{1+l_0^2})^2$, nous avons deux cas :
-%\begin{itemize}
-%\item $(-1-\sqrt{1+l_0^2})^2 > 2$ qui est une condition irréalisable
-%\item $(-1-\sqrt{1+l_0^2})^2 < -2 \Rightarrow \sqrt{1+l_0^2}>1$ qui est une condition toujours satisfaite.
-%\end{itemize}
-%Finalement, il n'y a aucune condition sur $l_0$ pour l'existance de des solutions de $X_1$.\\
 Pour la solution $X=(-1+\sqrt{1+l_0^2})^2$, nous avons deux cas de condition d'existance :\\
 \begin{itemize}
 \item $(-1+\sqrt{1+l_0^2})^2 > 2 \Rightarrow \sqrt{1+l_0^2}>3\Rightarrow l_0 > \sqrt{8}$
@@ -295,13 +264,13 @@ J=
 La nature des points d'équilibre du système est définie par la trace, le déterminant, et le discriminant du polynôme caractéristique de la matrice Jacobienne ci-dessus.\\
 $ Tr(J) = 0 $\\
 $ det(J) = -\frac{\delta f_2}{\delta x_1} $\\
-$ \Delta(J) = Tr^2(J) - 4det(J) = 4*frac{\delta f_2}{\delta x_1} $\\
+$ \Delta(J) = Tr^2(J) - 4det(J) = 4*\frac{\delta f_2}{\delta x_1} $\\
 
 On a alors besoin de déterminer le signe de $frac{\delta f_2}{\delta x_1}$ aux points d'équilibre.\\
 
 En factorisant $f_2$, on a : \\
 $f_2=0=-\frac{x}{2(1+x^2)}*(x^2-\frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2)$\\
-car $\ddot(x)=0$ aux points d'équilibre.\\
+car $\ddot{x} = 0$ aux points d'équilibre.\\
 
 Ici, nous avons deux éventualités pour satisfaire cette équation :\\
 \begin{itemize}
@@ -312,7 +281,7 @@ Ici, nous avons deux éventualités pour satisfaire cette équation :\\
 \subsubsection*{Premier Cas}
 $\frac{x}{1+x^2}=0 \longrightarrow x=0$\\
 On a alors :\\
-$frac{\delta f_2}{\delta x_1}=\frac{-1}{2}\frac{\delta \frac{x}{1+x^2}}{\delta x}(x^2 - \frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2)=-2\frac{1+x^2-4x^2}{2(1+x^2)^2}$
+$\frac{\delta f_2}{\delta x_1}=\frac{-1}{2}\frac{\delta \frac{x}{1+x^2}}{\delta x}(x^2 - \frac{x^2\times l_0}{\sqrt{1+\frac{x^4}{4}}}+2)=-2\frac{1+x^2-4x^2}{2(1+x^2)^2}$
 Ce qui équivaut, avec l'hypothèse précédente $x=0$, à :\\
 \[frac{\delta f_2}{\delta x_1}=-1\]
 
@@ -346,8 +315,8 @@ D'où le tableau de variations suivant :\\
 \tkzTab{$x$/1,$\frac{\delta f_2}{\delta x_1}$/1,ENLEVER CETTE LIGNE/1.8}{$-\infty$,$+\infty$}{+,-,+}{-/$-\infty$, +/$+\infty$}
 \tkzTabVal[draw]{1}{2}{0.4}{$-\sqrt{2}$}{$0$}
 \tkzTabVal[draw]{1}{2}{0.6}{$\sqrt{2}$}{$0$}\\
-\end{tikzpicture}
-
+\end{tikzpicture}\\
+Les points d'équilibre sont les suivants :\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 $x=0$\\
 $x_1=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
@@ -356,7 +325,8 @@ $x_3=\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
 $x_4=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-On peut alors étudier la nature des poitns d'équilibre.
+On peut alors étudier leur nature.\\
+\subsubsection*{Nature des points d'équilibre}
 En partant de la condition d'existence des points d'équilibre:\\
 $l_0>2\sqrt{2}$\\
 $1+l_0^2>9$\\
@@ -541,13 +511,6 @@ Matlab peut réaliser l'intégration. On lui demande d'intégrer sur plusieurs v
 \subsection{Représenter le diagramme de Matlab le diagramme de bifurcation  en $(a,\gamma)$ pour chacun des points d'équilibres.}
 L'équation différentielle s'écrit désormais:\\
 \[  \ddot{x} + \gamma.\dot{x} + \frac{\dot{x}^2x}{1+x^2} + \frac{1}{2}\frac{x^3}{1+x^2} + \frac{x}{1+x^2} - \frac{a.x^3}{2(1+x^2)\sqrt{x^4/4+1}}=0 \]	
-%On détermine les points d'équilibres: Les points d'équilibres sont les memes car \ddot{x}=\dot{x}=0
-On a toujours:\\
-$x_0=0$\\
-$x_1=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
-$x_2=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
-$x_3=\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
-$x_4=-\sqrt{-1+\sqrt{1+l_0^2}+\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}}$\\
 
 Il faut calculer pour chaque points d'équilibres:\\
 D= Calcul du discriminant du polynôme caractéristique\\
@@ -564,9 +527,9 @@ J=
 \end{pmatrix}
 \]
 
-On a toujours \[\dot{x_1}=x_2=f_1(x_1*,x_2*)\]
+On a toujours : $\dot{x_1}=x_2=f_1(x_1*,x_2*)$\\
 D'où $\frac{\delta f_1}{\delta x_1}=0$ et $\frac{\delta f_1}{\delta x_2}=1$\\
-Le terme supplémentaire n'a pas une dérivée nulle par rapport à $x_2$: $\frac{\delta \gamma x_2}{\delta x_2}=\gamma$\\.
+Le terme supplémentaire n'a pas une dérivée nulle par rapport à $x_2$: $\frac{\delta \gamma x_2}{\delta x_2}=\gamma$\\
 Nous obtenons ainsi la nouvelle matrice Jacobienne associée au système avec forces de frottements :
 \[
 J=
