@@ -383,72 +383,6 @@ D'après le tableau de variation, $\frac{\delta f_2}{\delta x}>0$.\\
 $x_4$ est donc, comme $x_3$, un point selle.\\
 \end{itemize}
 On représente les $x_n$ sur le portrait de phase.
-%LA CE SERAIT SYMPA DE FAIRE UN SCHEMA AVEC EN GROS LES Xn PLACÉS A PEU PRES.
-
-
-%D'après l'équation:\\
-%$\ddot{x}=0$\\
-%On a :\\
-%$\sqrt{1+\frac{x^4}{4}}=\frac{x^2\times l_0}{2+x^2}$\\
-%On peut alors simplifier l'équation de la dérivée partielle de $f_2$, pour obtenir :\\
-%$\frac{\delta f_2}{\delta x}=-\frac{x}{2(1+x^2)}(2-\frac{2(2+x^2}{x^2}+\frac{x^2}{2}\frac{2+x^2}{1+\frac{x^4}{4}})$
-%
-%Pour étudier le signe de $\frac{\delta f_2}{\delta x}$, on la compare à 0 :
-%$2x^2-2(2+x^2)+\frac{x^4}{4}\frac{2+x^2}{1+\frac{x^4}{4}}=0$\\
-%$2x^2-\frac{x^6}{2}-(4+2x^2)(1+\frac{x^4}{4})+x^4+\frac{x^6}{2}=0$\\
-%$2x^2+x^6-4-x^4-2x^2-\frac{x^6}{2}+x^4=0$\\
-%$\frac{x^6}{2}-4=0$\\
-%$x^6=8$\\
-%On peut alors déterminer le signe de $\frac{\delta f_2}{\delta x}$ qui est directement lié à celui de $x^6-8$, afin de trouver le signe de :\\
-%$tr(J_f) = 0 $\\
-%$det(J_f) =  -C\times(x^6-8) $\\
-%$\Delta(J_f) = 4C\times(x^6-8)$\\
-%Avec C une fonction strictement positive.
-%
-%Les relations qui lient le signe de $\frac{\delta f_2}{\delta x_1}$ à celui de $x^6-8$ sont les suivantes :\\
-%$\frac{\delta f_2}{\delta x_1}<0$ si $x^6<8$\\
-%$\frac{\delta f_2}{\delta x_1}=0$ si $x^6=8$\\
-%$\frac{\delta f_2}{\delta x_1}>0$ si $x^6>8$\\
-
-%Il faut alors déterminer $\frac{\delta f_2}{dx_1}$ : \\
-%\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
-%Détail du calcul de  $\frac{\delta f_2}{dx_1}$ :\\
-%(VIDE !!! voir lune à plume, je vois de quoi je parle. Pour info, c'est du calcul brut, pas "d'astuce")\\
-%
-%On peut alors calculer les propriétés de la matrice (respectivement Déterminant, Trace, Discriminant du polynôme caractéristique) :\\
-%\[ det(J_f) =  \frac{\delta f_2}{dx_1} \]
-%\[ tr(J_f) = 0 \]
-%\[ \Delta(J_f) = tr(J_f)^2 - 4\times det(J_f) = 4\frac{\delta f_2}{dx_1}\]
-%Pour connaitre la nature du point d'équilibre, il nous reste plus qu'à étudier le signe de $\frac{\delta f_2}{dx_1}$ :\\
-%\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - (1+x^2)\frac{l_0x^6}{2(1+\frac{x^4}{4})}}{2\sqrt{1+\frac{x^4}{4}}(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
-%D'après la question précédente, on a en tout point d'équilibre $\sqrt{1+\frac{x^4}{4}}=\frac{x^2l_0}{x^2+2}$, d'où : \\
-%\[ \frac{\delta f_2}{dx_1} = \frac{3l_0x_1^2+l_0x^4 - \frac{1}{2}(x^2+2)^2(1+x^2)\frac{l_0x^6}{\frac{(x^2l_0)^2}{(x^2+2)}}}{2(1+x^2)^2}-\frac{3x^2+x^4}{2(1+x^2)^2} \]
-%\[ =\frac{-\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4}{2(1+x^2)^2} \]
-%
-%(Jusqu'à là, je suis sur que c'était la bonne méthode. Le remplacement de $\sqrt{1+\frac{x^4}{4}}=\frac{x^2l_0}{x^2+2}$ est lui-aussi bon) \\
-%
-%Le dénominateur étant positif pour tout x, on cherche le signe du numérateur, c-à-d de :\\
-%\[ -\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4 \]
-%
-%%Thibault:
-%Étude de signe du polynôme:\\
-%on pose, \[ -\frac{1}{2l_0}x^2(x^2+2)^2(1+x^2)(x^2+2)+(3l_0x^2+l_0x^2+l_0x^4)(x^2+2)-3x^2-x^4  = 0\]
-%
-%Le polynôme est factorisable par $x^2$ et on obtient un polynôme d'ordre 8\\
-%$-1x^8/l_0-7x^6/l_0-18x^4/l_0+x^2(n 6l_0-1-20/l_0)+(8l_0-1-8l_0) = 0$\\
-%On pose :\\ $V = -1/l_0$\\   $Y = (6l_0-1-20/l_0)$\\   $Z = (8l_0-1-8/l_0)$\\
-%on a: $Vx^8+7Vx^6+18Vx^4+Yx^2+Z = 0$\\
-%le polynôme est d'ordre 8 c'est donc un ordre pair donc il admet au maximum deux racines.\\
-%Or le coefficient de l'ordre 8 est impair et z est négatif donc le polynôme admet deux racines de signes contraires.\\
-%on peut donc factoriser le polynôme par un polynôme d'ordre 6 et par un polynôme d'ordre 2\\
-
-
-
-
-
-
-
-
 
 
 \section{On suppose que $a=\sqrt{15}$.}
@@ -456,8 +390,8 @@ On représente les $x_n$ sur le portrait de phase.
 On détermine les valeurs numériques des points d'équilibres pour $a=\sqrt{15}$. On a:\\
 $x_0=0$\\
 $x_1=\sqrt{3 - \sqrt{5}}=0.874$\\
-$x_2=\sqrt{3 - \sqrt{5}}=-0.874$\\
-$x_3=-\sqrt{3 + \sqrt{5}}=2.288$\\
+$x_2=-\sqrt{3 - \sqrt{5}}=-0.874$\\
+$x_3=\sqrt{3 + \sqrt{5}}=2.288$\\
 $x_4=-\sqrt{3 + \sqrt{5}}=-2.288$\\
 
 \subsection{Déterminer l'intégrale première du système.}
@@ -512,6 +446,8 @@ Matlab peut réaliser l'intégration. On lui demande d'intégrer sur plusieurs v
 	\caption{Période T du système oscillatoire en fonction de $x_0$}
 \end{figure} 
 
+Contre-intuitivement, la période en fonction de $x_0$ (et par conséquent la hauteur initiale) n'est pas une fonction monotone. On voit apparaitre une amplitude de résonnance en $x_0=a$, la longueur de repos du ressort.
+
 \section{On suppose maintenant que le système est soumis à une force de frottement $\gamma > 0$ et que l'équation devient: (E) $\ddot{x} + \gamma.\dot{x} + f(x,a) = 0$.}
 \subsection{Représenter le diagramme de Matlab le diagramme de bifurcation  en $(a,\gamma)$ pour chacun des points d'équilibres.}
 L'équation différentielle s'écrit désormais:\\
@@ -548,6 +484,13 @@ $tr(J) = \gamma $\\
 $det(J) = -\frac{\delta f_2}{\delta x_1} $\\
 $\Delta(J) = tr^2(J)-4det(J)=\gamma^2 + 4\frac{\delta f_2}{\delta x_1}$\\ 
 
+Sur matlab, on trace le diagramme de bifurcation en fonction des différents paramètres, pour chaque point d'équilibre : \\
+\begin{itemize}
+\item Pour $\gamma$ avec les valeurs 1, 2 et 3;
+\item Pour a, la longueur du ressort, pour des valeurs allant de $2\sqrt{2}$ (condition d'existence des points d'équilibre différents de 0) à $\sqrt{15}$, qui est le cas maximum étudié en exemple. En théorie il n'y a pas de condition sur la valeur maximale limite pour a.
+\end{itemize}
+
+Faute de n'avoir su faire apparaitre le diagramme de bifurcation avec matlab, le résultat ne sera pas présenté.
 
 
 \subsection{On suppose que $a=\sqrt{15}$. Pour quelles valeurs (exactes) de $\gamma$ les points d'équilibres attractifs changent-ils de nature.}
