@@ -552,28 +552,37 @@ $\Delta(J) = tr^2(J)-4det(J)=\gamma^2 + 4\frac{\delta f_2}{\delta x_1}$\\
 
 \subsection{On suppose que $a=\sqrt{15}$. Pour quelles valeurs (exactes) de $\gamma$ les points d'équilibres attractifs changent-ils de nature.}
 
-Comme nous venons de le voir, en ajoutant une force de frottement, un facteur $\gamma$ est ajouté à l'équation, la trace et le discriminant sont modifiés. 
-De plus, pour les points attractifs $frac{\delta f_2}{\delta x_1}$ < 0.
-Nous nous intéressons donc aux trois points centres que nous avons trouvé dans les questions précédentes:
+Comme nous venons de le voir, en ajoutant une force de frottement, un facteur $\gamma$ est ajouté à l'équation, la trace et le discriminant sont modifiés. \\
+De plus, pour les points attractifs $\frac{\delta f_2}{\delta x_1}$ < 0.\\
+Nous nous intéressons donc aux trois points centres que nous avons trouvé dans les questions précédentes:\\
 $x=0$\\
 $x_1=\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
-$x_2=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$\\
-
-On étudie les signes de la trace et de Delta.
-On détermine les racines de delta.
-On pose:
-$0 = gamma^2 + 4\frac{\delta f_2}{\delta x_1}$
-
+$x_2=-\sqrt{-1+\sqrt{1+l_0^2}-\sqrt{-2-2\sqrt{1+l_0^2}+l_0^2}})$
+\\
+On étudie les signes de la trace et de Delta.\\
+On détermine les racines de delta.\\
+On pose:\\
+$0 = \gamma^2 + 4\frac{\delta f_2}{\delta x_1}$ 
+\\
 $\Delta=-16.\frac{\delta f_2}{\delta x_1}$ 
+\\
+Les racines sont donc: $ ^+_-0.5\sqrt{\frac{-16\delta f_2}{\delta x_1}} $   Soient: $ ^+_-2\sqrt{\frac{-\delta f_2}{\delta x_1}} $  \\
+On a alors le tableau de variation suivant:\\
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{tab_var_gamma.jpg}
+\end{figure} 
+Lorsque gamma vaut $ ^+_-2\sqrt{\frac{-\delta f_2}{\delta x_1}} $, le discriminant est nul. $x_0$, $x_1$ et $x_2$ (qui étaient des centres avant d’avoir ajouté les frottements) ne sont plus des points critiques. On constate également que de part et d’autre de ces valeurs, ces points changes de nature. Ils changent également de nature de part et d’autre de 0. A gauche de 0 ils sont attractifs et à droite ils sont répulsifs. Quant $\gamma$ vaut 0, ces points critiques sont des centres (il n’y a pas de frottement).
+\\
+Les points critiques attractifs changent de nature lorsque gamma vaut :\\
+$ ^+_-2\sqrt{\frac{-\delta f_2}{\delta x_1}} $ ou 0. 
 
 
 \subsection{Représenter le portrait de phase pour $\gamma=1, \gamma=2, \gamma=3.$}
-On calcul l'intégrale première du système afin de pouvoir déterminer le diagramme de phase. On a:
-\[\fbox{$ \frac{1}{2}v^2 + \gamma.v + \frac{1}{8}x^4 + \frac{x^2}{2} - a\sqrt{\frac{x^4}{4} + 1} = C  $}\]
-Il faut utiliser la deuxième méthode (local)
-%Il y a plus qu'a tester sur matlab.
-%gamma=1
-%gamma=2 
-%gamma=3
-
+%On calcul l'intégrale première du système afin de pouvoir déterminer le diagramme de phase. On a:
+%\[\fbox{$ \frac{1}{2}v^2 + \gamma.v + \frac{1}{8}x^4 + \frac{x^2}{2} - a\sqrt{\frac{x^4}{4} + 1} = C  $}\]
+L'intégrale première du système avec les frottements n'étant pas calculable, on est contraint d'utiliser la deuxième méthode pour déterminer le portrait de phase pour:\\
+$\gamma=1$\\
+$\gamma=2$\\
+$\gamma=3$\\
+La deuxième méthode permet de calculer le portrait de phase local construit à partir de solutions déterminés numériquement.  
 \end{document}
